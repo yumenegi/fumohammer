@@ -21,16 +21,16 @@ function renderCharacter(c) {
     ['HP', c.hp], ['Spirit (max cap)', c.spirit], ['Speed', c.speed], ['Defense', c.defense],
   ]);
   const danmaku = mdTable(
-    ['Name', 'Tier', 'Spirit Cost', 'Range', 'Damage', 'Notes'],
-    c.danmaku.map(m => [m.name, m.tier, m.cost, `${m.range}cm`, m.damage, note(m.notes)])
+    ['Name', 'Tier', 'Spirit Cost', 'Range', 'Damage', 'Type', 'Notes'],
+    c.danmaku.map(m => [m.name, m.tier, m.cost, `${m.range}cm`, m.damage, m.type, note(m.notes)])
   );
   const melee = mdTable(
-    ['Name', 'Tier', 'Spirit Cost', 'Damage', 'Notes'],
-    c.melee.map(m => [m.name, m.tier, m.cost, m.damage, note(m.notes)])
+    ['Name', 'Tier', 'Spirit Cost', 'Damage', 'Type', 'Notes'],
+    c.melee.map(m => [m.name, m.tier, m.cost, m.damage, m.type, note(m.notes)])
   );
   const spellCards = mdTable(
-    ['Name', 'Spirit Cost', 'Uses/Game', 'Tier', 'Range', 'Effect'],
-    c.spellCards.map(s => [s.name, s.cost, s.uses, s.tier, `${s.range}cm`, s.effect])
+    ['Name', 'Spirit Cost', 'Uses/Game', 'Tier', 'Range', 'Type', 'Effect'],
+    c.spellCards.map(s => [s.name, s.cost, s.uses, s.tier, `${s.range}cm`, s.type, s.effect])
   );
 
   return `### ${c.name}
@@ -60,7 +60,9 @@ const HEADER = `# FUMOHAMMER CODEX
 
 > **Status effects:** README.md Section 7.6 defines the Frozen, Frostbite, Burnt, Sealed, Cursed, Blessed, and Weaken keywords, but each application's *duration* (in rounds, capped at 3) is set here on the specific move or Spell Card that inflicts it — write it directly into that move's Notes/Effect column, e.g. "Applies Frostbite for 2 rounds."
 
-> **Range:** plain cm distances now, no templates (README.md Section 6.2) — every Danmaku move and Spell Card below lists its range in cm, and every attack is single-target only, no AoE. Melee range is a fixed 10cm for everyone and isn't listed per-move.
+> **Range:** plain cm distances now, no templates (README.md Section 6.2) — every Danmaku move and Spell Card below lists its range in cm. Melee range is a fixed 10cm for everyone and isn't listed per-move.
+
+> **Type:** every attack has a Type — "direct" (single target), "small arc" (90 degree), "large arc" (180 degree), or "annihilate" (full circle). Arc types are centered on the attacker's facing; see README.md Section 4.3.1 for the full rules. Every character in this roster is currently "direct" only — no one's been reclassified to use an arc yet.
 
 ---
 
@@ -81,19 +83,19 @@ Copy this block for any new character.
 | Defense | |
 
 **Danmaku Moves**
-| Name | Tier | Spirit Cost | Range | Damage | Notes |
-|---|---|---|---|---|---|
-| | | | | | |
+| Name | Tier | Spirit Cost | Range | Damage | Type | Notes |
+|---|---|---|---|---|---|---|
+| | | | | | | |
 
 **Melee Moves**
-| Name | Tier | Spirit Cost | Damage | Notes |
-|---|---|---|---|---|
-| | | | | |
-
-**Spell Cards** (uses per game — README.md Section 4.7)
-| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+| Name | Tier | Spirit Cost | Damage | Type | Notes |
 |---|---|---|---|---|---|
 | | | | | | |
+
+**Spell Cards** (uses per game — README.md Section 4.7)
+| Name | Spirit Cost | Uses/Game | Tier | Range | Type | Effect |
+|---|---|---|---|---|---|---|
+| | | | | | | |
 
 ---
 

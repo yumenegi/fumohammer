@@ -29,6 +29,7 @@
       - [4.2.1 Starting Spirit / Max Cap](#421-starting-spirit--max-cap)
       - [4.2.2 Spirit Regeneration (Ramp Table)](#422-spirit-regeneration-ramp-table)
     - [4.3 Attack Tiers](#43-attack-tiers)
+      - [4.3.1 Attack Types](#431-attack-types)
     - [4.4 Grazing](#44-grazing)
     - [4.5 Blocking](#45-blocking)
     - [4.6 Defense Rolls](#46-defense-rolls)
@@ -184,6 +185,20 @@
 | 2 | Yes | A successful graze against this tier costs the defender 1 Spirit; a failed graze costs nothing |
 | 3 | No | Cannot be grazed under any circumstance; always resolved by the Defense Roll |
 
+#### 4.3.1 Attack Types
+> Every Danmaku, Melee, and Spell Card move also has a **Type** (listed on the character's card — see the Codex), which determines its shape. Type is independent of Tier: Tier governs Grazing, Type governs who gets hit. All Types share the same range as normal (Section 6.2); Type only changes which enemy fumo(s) within that range are caught by the attack.
+
+| Type | Shape | Hits |
+|---|---|---|
+| Direct | Single target | One enemy fumo, attacker's choice, within range |
+| Small Arc | 90° arc | Every enemy fumo within the arc and range |
+| Large Arc | 180° arc | Every enemy fumo within the arc and range |
+| Annihilate | Full circle (360°) | Every enemy fumo within range, any direction — facing doesn't matter |
+
+> Small Arc and Large Arc are centered on the attacker's **facing** (Section 6.1) — the arc extends outward from wherever the fumo is currently facing, out to the move's range. Annihilate ignores facing entirely.
+>
+> A fumo hit by a Small Arc, Large Arc, or Annihilate attack resolves the Combat Resolution sequence (Section 7) independently from every other fumo it hit — its own Graze attempt, its own Defense Roll — all against the same single declared attack and its one Spirit cost. Allied fumos are never hit by their own team's attacks.
+
 ### 4.4 Grazing
 > Grazing is a reactive Speed-based check a defender may attempt against a Tier 1 or Tier 2 attack. Roll a d20; if the result is equal to or under the defender's Speed stat, the graze succeeds and the attack is avoided (a successful Tier 2 graze costs the defender 1 Spirit; Tier 1 is free). If the roll fails, proceed to the Defense Roll (Section 4.6) — a failed graze costs no Spirit, at either Tier.
 
@@ -229,16 +244,18 @@
 > The active fumo may move up to its Movement distance: **Speed stat × 3cm**. This includes any special movement types granted by its kit (flight, dash, teleport, etc.).
 >
 > Sanity check: Cirno (Speed 8) moves 24cm per activation — 96cm over 4 activations, enough to cross the full ~100cm board (Section 3.2) in 4 turns, since a fumo's own footprint means it doesn't need to travel the literal full length to reach the far zone.
+>
+> **Facing:** a fumo's facing is simply the direction its eyes/face are pointing — no marker or token needed. It matters for Small Arc and Large Arc attacks (Section 4.3.1). The active fumo may turn to face any direction freely at any point during its own Movement Phase, regardless of how far (or whether) it actually moves. Once the Movement Phase is declared over, facing is locked for the rest of that activation — it cannot be turned to line up a Danmaku, Melee, or Spell Card attack.
 
 ### 6.2 Danmaku Phase
-> The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and pick one enemy fumo within that move's range (a plain cm distance, listed on the character's card — see the Codex). No templates or facing for now — range is a simple distance check, and attacks are single-target only (no AoE). The defender may react live with a Graze attempt if the attack's Tier allows it; otherwise (or if the Graze fails) it resolves via the Defense Roll, following the Combat Resolution sequence in Section 7.
+> The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and identify every enemy fumo caught by it — one target of the attacker's choice within range for a Direct move, or every enemy fumo within the move's arc/circle and range for Small Arc, Large Arc, or Annihilate (Section 4.3.1). No physical templates — range is a plain cm distance and arcs are measured from the attacker's facing. Each fumo caught may react live with a Graze attempt if the attack's Tier allows it; otherwise (or if the Graze fails) it resolves via the Defense Roll, following the Combat Resolution sequence in Section 7.
 >
 > Range (and Movement, and melee range) is measured base-to-base: nearest edge of the attacker's base to nearest edge of the target's base.
 >
 > Unavailable this activation if the fumo is declaring a Spell Card (Section 6.4) — see the note there.
 
 ### 6.3 Melee Phase
-> Melee range is a flat **10cm**. If the active fumo has an enemy within that range after Movement, it may make one melee attack against that target, following the same choose-move/pay-cost/react structure as the Danmaku Phase. Single-target only, like Danmaku.
+> Melee range is a flat **10cm**. If the active fumo has an enemy within that range after Movement, it may make one melee attack, following the same choose-move/pay-cost/react structure as the Danmaku Phase — including Type (Section 4.3.1): a Direct melee move hits one target, an arc or Annihilate melee move catches every enemy fumo within its shape and the 10cm range.
 >
 > Unavailable this activation if the fumo is declaring a Spell Card (Section 6.4) — see the note there.
 
@@ -252,11 +269,11 @@
 ## 7. Combat Resolution
 
 ### 7.1 Attack Sequence (Step by Step)
-1. Attacker declares a move (Danmaku or Melee) against one target, paying its Spirit cost.
-2. Attacker confirms the target is within the move's range (Danmaku) or within 10cm (Melee) — see Section 6.2.
-3. Defender declares whether to attempt a Graze (only possible if the attack's Tier allows it).
-4. Resolve the Graze attempt if one was declared; if there was none, or it failed, proceed to the Defense Roll.
-5. Apply remaining damage to the defender's HP, and deduct any Spirit spent by either party.
+1. Attacker declares a move (Danmaku or Melee), paying its Spirit cost once regardless of how many targets it ends up hitting.
+2. Attacker identifies every enemy fumo the move catches: one chosen target within range (Danmaku) or 10cm (Melee) for a Direct move, or every enemy fumo within the move's arc/circle and range for Small Arc, Large Arc, or Annihilate (Section 4.3.1) — see Section 6.2.
+3. For each fumo caught, independently: that defender declares whether to attempt a Graze (only possible if the attack's Tier allows it).
+4. For each fumo caught, independently: resolve its Graze attempt if one was declared; if there was none, or it failed, proceed to its own Defense Roll.
+5. Apply remaining damage to each affected defender's HP, and deduct any Spirit spent by either party.
 
 ### 7.2 Graze Roll
 - Die: d20
@@ -485,6 +502,8 @@ A:
 | Block | Not a declared action — the result of rolling a natural 1 on the Defense Roll, fully negating the attack |
 | Spirit | The shared resource spent on attacks, Tier 2 grazing, and spell cards |
 | Tier | Classification of an attack determining whether it can be Grazed (Block, via the Defense Roll, applies regardless of Tier) |
+| Type | Classification of an attack determining its shape — Direct, Small Arc, Large Arc, or Annihilate (see Section 4.3.1) |
+| Facing | A fumo's current direction, set during its own Movement Phase and locked afterward; centers its Small/Large Arc attacks (see Section 6.1) |
 | Artifact Site | One of three locations within the Bamboo Forest of the Lost that can be captured for a persistent bonus (see Section 8.3.1) |
 | Capture Point | Progress toward capturing an Artifact Site, gained per occupying fumo at End of Round, capped at +2/round (see Section 8.3.2) |
 | Objective Point | Progress toward Objective Control of an enemy home zone, gained per occupying fumo at End of Round, capped at +2/round — separate from Capture Points (see Section 8.5) |
@@ -520,6 +539,7 @@ A:
 | 0.19 | | Kaguya's Wrath (Section 8.3.1) strengthened — its carrier's attacks now bypass both Graze and Block, not just Graze, regardless of Tier |
 | 0.20 | | Tier 2 Graze cost set at 1 Spirit on a success only — a failed graze costs nothing, at either Tier (Sections 4.3, 4.4, 7.2). Was previously unspecified. Block's Spirit cost is still just "more than a Graze," no number yet |
 | 0.21 | | Removed Block as a separately declared action (Sections 4.5, 7.4) — it's no longer chosen or Spirit-costed. A Block is now just what a natural 1 on the Defense Roll (Section 7.3) means, for an attack of any Tier. Attack Sequence (7.1), the Danmaku Phase (6.2), and the Combat Resolution diagram (12.1) updated to match — defender now only ever declares whether to attempt a Graze. Reworded Kaguya's Wrath (8.3.1) accordingly: it denies Graze and downgrades a Nat 1 against it to an ordinary success rather than a Block. Also fixed a stale "flat Defense stat" label in the combat diagram (should've read "flat 2" since 0.10) and two leftover "Spirit spent on... blocking" mentions |
+| 0.22 | | Implemented AoE (Section 4.3.1, new): Direct (single-target, as before), Small Arc (90°), Large Arc (180°), and Annihilate (360°, facing-independent) attack Types, each hitting every enemy fumo within its shape and range, resolving Graze/Defense independently per target against one shared Spirit cost. Added Facing (Section 6.1) — read directly off the fumo's own face/eyes, no marker needed; turnable freely during a fumo's own Movement Phase, locked for the rest of that activation, centers Small/Large Arc. Updated the Danmaku/Melee Phases (6.2, 6.3) and Attack Sequence (7.1) for multi-target resolution. All 8 roster characters are still Type: direct in characters.yaml — none reclassified to an arc yet |
 
 ### 12.6 Credits
 > ゆめねぎ  
