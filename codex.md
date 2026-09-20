@@ -135,152 +135,152 @@ Copy this block for any new character.
 ---
 
 ### Tewi Inaba
-*(template — not yet filled in)*
-- **Native Faction:**
-- **Zone Affinity:**
-- **Lore blurb:**
+- **Native Faction:** Gensokyolites
+- **Zone Affinity:** Bamboo Forest of the Lost — Tewi lives in Eientei, right on its doorstep. While occupying the Bamboo Forest, she gains an additional +1 Spirit at Start of Round, stacking with the zone's own bonus (README.md Section 8.3)
+- **Lore blurb:** An old, powerful rabbit youkai posing as a minor resident of Eientei. Controls luck — usually other people's, and usually for the worse.
 
 | Stat | Value |
 |---|---|
-| HP | |
-| Spirit (max cap) | |
-| Speed | |
-| Defense | |
+| HP | 7 |
+| Spirit (max cap) | 7 |
+| Speed | 9 |
+| Defense | 5 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| | | | | | |
+| Lucky Rabbit's Foot | 1 | 1 | Medium | 2 | Basic poke |
+| Ill-Omened Fortune | 2 | 3 | Medium | 3 | Also applies Cursed for 1 round |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
 |---|---|---|---|---|
-| | | | | |
+| Spade Dig | 1 | 1 | 3 | Quick strike from a tunnel |
 
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| | | | | |
+| Beckoning of the Unlucky | 5 | 1 | 3 | 4 damage; also applies Cursed for 2 rounds |
 
 ---
 
 ### Aya Shameimaru
-*(template — not yet filled in)*
-- **Native Faction:**
-- **Zone Affinity:**
-- **Lore blurb:**
+- **Native Faction:** Gensokyolites
+- **Zone Affinity:** None
+- **Lore blurb:** Tengu reporter for the Bunbunmaru Newspaper, and the fastest thing in Gensokyo when she's not busy embellishing a story.
 
 | Stat | Value |
 |---|---|
-| HP | |
-| Spirit (max cap) | |
-| Speed | |
-| Defense | |
+| HP | 6 |
+| Spirit (max cap) | 6 |
+| Speed | 10 |
+| Defense | 3 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| | | | | | |
+| Gust of Wind | 1 | 1 | Long | 2 | Basic wind blast |
+| Tengu's Gale | 2 | 3 | Long line | 4 | Also applies Weaken for 1 round |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
 |---|---|---|---|---|
-| | | | | |
+| Fan Strike | 1 | 1 | 3 | Quick fan whack |
 
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| | | | | |
+| Illusionary Wind God | 6 | 1 | 3 | 5 damage; Aya may immediately move an additional Speed-derived distance after this resolves (an exception to normal phase order, in the same spirit as the special movement types already allowed under README.md Section 6.1) |
 
 ---
 
 ### Sanae Kochiya
-*(template — not yet filled in)*
-- **Native Faction:**
-- **Zone Affinity:**
-- **Lore blurb:**
+- **Native Faction:** Gensokyolites
+- **Zone Affinity:** None
+- **Lore blurb:** Shrine maiden of the Moriya Shrine, and a human on her way to becoming a minor goddess. Performs miracles because the gods she serves need the publicity.
 
 | Stat | Value |
 |---|---|
-| HP | |
-| Spirit (max cap) | |
-| Speed | |
-| Defense | |
+| HP | 8 |
+| Spirit (max cap) | 8 |
+| Speed | 6 |
+| Defense | 6 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| | | | | | |
+| Wind Miracle | 1 | 1 | Medium | 2 | Basic bolt |
+| Water Sign: Suwako's Rain | 2 | 3 | Medium cone | 4 | Wide coverage |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
 |---|---|---|---|---|
-| | | | | |
+| Miracle Palm Strike | 1 | 1 | 3 | Divine-empowered strike |
 
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| | | | | |
+| Yasaka's Divine Wind | 6 | 1 | 3 | 4 damage to one target; Sanae also gains Blessed for 2 rounds |
 
 ---
 
 ### Yorigami Shion
-*(template — not yet filled in)*
-- **Native Faction:**
-- **Zone Affinity:**
-- **Lore blurb:**
+- **Native Faction:** Gensokyolites
+- **Zone Affinity:** None
+- **Lore blurb:** A god of poverty. Misfortune and destitution follow wherever she goes — mostly onto other people, which she considers only fair.
 
 | Stat | Value |
 |---|---|
-| HP | |
-| Spirit (max cap) | |
-| Speed | |
-| Defense | |
+| HP | 8 |
+| Spirit (max cap) | 7 |
+| Speed | 5 |
+| Defense | 5 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| | | | | | |
+| Aura of Poverty | 1 | 1 | Medium | 2 | Target also loses 1 Spirit |
+| Misfortune's Embrace | 2 | 3 | Medium | 3 | Target also loses 2 Spirit |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
 |---|---|---|---|---|
-| | | | | |
+| Destitute Grasp | 1 | 1 | 3 | Target also loses 1 Spirit |
 
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| | | | | |
+| Deific Poverty God | 6 | 1 | 3 | 5 damage; target also loses 3 Spirit |
 
 ---
 
 ### Yuyuko Saigyouji
-*(template — not yet filled in)*
-- **Native Faction:**
-- **Zone Affinity:**
-- **Lore blurb:**
+- **Native Faction:** Gensokyolites
+- **Zone Affinity:** None
+- **Lore blurb:** Ghost princess of Hakugyokurou, cheerfully obsessed with death, and one of the most powerful beings in Gensokyo whenever she can be bothered to act like it.
 
 | Stat | Value |
 |---|---|
-| HP | |
-| Spirit (max cap) | |
-| Speed | |
-| Defense | |
+| HP | 9 |
+| Spirit (max cap) | 10 |
+| Speed | 5 |
+| Defense | 7 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| | | | | | |
+| Butterfly Delusion | 1 | 1 | Medium | 2 | Spread of ghost butterflies |
+| Ghost Sign: Soul Sculpture | 2 | 3 | Medium | 4 | — |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
 |---|---|---|---|---|
-| | | | | |
+| Fan of the Nine Heavens | 1 | 1 | 3 | — |
 
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| | | | | |
+| Perfect Cherry Blossom | 8 | 1 | 3 | 7 damage; also applies Frozen for 1 round. Highest all-in single Spell Card in the roster |
 
 ---
 
