@@ -3,9 +3,11 @@
 
 > Companion document to [README.md](README.md) — see Section 9 (Character Cards) and Section 10 (Roster) there for how these cards plug into the systems. This file holds the actual stat blocks; the rulebook only defines what the fields mean.
 
-> **Note on numbers:** README.md hasn't finalized base damage/HP magnitudes yet (see its Section 12.5 changelog and the open balance questions from early drafting). The values below use the stat cap already locked in (1–10, maybe 12 — README.md Section 4.1) and a damage range consistent with that cap, but treat every number here as provisional until a playtest confirms the base math.
+> **Note on numbers:** stats are capped at 12 (README.md Section 4.1), and the values below use a damage range consistent with that cap. Whether these specific numbers are actually balanced — i.e. whether fumos die at a reasonable pace — isn't something to solve on paper; that's exactly what the first playtest is for.
 
 > **Status effects:** README.md Section 7.6 defines the Frozen, Frostbite, Burnt, Sealed, Cursed, Blessed, and Weaken keywords, but each application's *duration* (in rounds, capped at 3) is set here on the specific move or Spell Card that inflicts it — write it directly into that move's Notes/Effect column, e.g. "Applies Frostbite for 2 rounds."
+
+> **Range:** plain cm distances now, no templates (README.md Section 6.2) — every Danmaku move and Spell Card below lists its range in cm, and every attack is single-target only, no AoE. Melee range is a fixed 10cm for everyone and isn't listed per-move.
 
 ---
 
@@ -36,9 +38,9 @@ Copy this block for any new character.
 | | | | | |
 
 **Spell Cards** (uses per game — README.md Section 4.7)
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| | | | | |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| | | | | | |
 
 ---
 
@@ -59,8 +61,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Icicle Fall | 1 | 1 | Short cone | 2 | Freely grazeable poke |
-| Ice Sign: Icicle Machine Gun | 2 | 3 | Medium line | 4 | Rapid volley |
+| Icicle Fall | 1 | 1 | 20cm | 2 | Freely grazeable poke |
+| Ice Sign: Icicle Machine Gun | 2 | 3 | 35cm | 4 | Rapid volley |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -68,9 +70,9 @@ Copy this block for any new character.
 | Frozen Fist | 1 | 1 | 3 | Close-range ice punch |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Perfect Freeze | 6 | 1 | 3 | 6 damage to one target; also applies Frozen for 1 round (see README.md Section 7.6) |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Perfect Freeze | 6 | 1 | 3 | 35cm | 6 damage to one target; also applies Frozen for 1 round (see README.md Section 7.6) |
 
 ---
 
@@ -89,8 +91,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Homing Amulet | 1 | 1 | Medium, homing | 2 | Curves toward target within cone |
-| Persuasion Needle | 2 | 3 | Medium line | 4 | Rapid needle volley |
+| Homing Amulet | 1 | 1 | 35cm | 2 | Curves slightly toward its target |
+| Persuasion Needle | 2 | 3 | 35cm | 4 | Rapid needle volley |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -98,9 +100,9 @@ Copy this block for any new character.
 | Gohei Strike | 1 | 1 | 3 | Exorcism wand strike |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Fantasy Seal | 5 | 2 | 3 | 5 damage; template hits every enemy fumo caught in it, not just one target (existing template-based multi-hit already supported per README.md Section 6.2) |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Fantasy Seal | 5 | 2 | 3 | 40cm | 5 damage to one target. (Canonically a spread attack; single-target for now since AoE isn't supported yet — see README.md Section 6.2) |
 
 ---
 
@@ -119,8 +121,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Magic Missile | 1 | 1 | Medium | 2 | Basic bolt |
-| Illusion Laser | 2 | 3 | Long line | 4 | Thin piercing beam |
+| Magic Missile | 1 | 1 | 35cm | 2 | Basic bolt |
+| Illusion Laser | 2 | 3 | 50cm | 4 | Thin piercing beam |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -128,9 +130,9 @@ Copy this block for any new character.
 | Broom Whack | 1 | 1 | 2 | Weakest melee in the roster — Marisa isn't built for close range |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Master Spark | 7 | 1 | 3 | 8 damage (highest single hit in the roster); long line template, hits every fumo caught in it. Costs nearly all of Marisa's Spirit cap in one shot |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Master Spark | 7 | 1 | 3 | 50cm | 8 damage to one target (highest single hit in the roster). (Canonically a piercing beam; single-target for now since AoE isn't supported yet — see README.md Section 6.2). Costs nearly all of Marisa's Spirit cap in one shot |
 
 ---
 
@@ -149,8 +151,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Lucky Rabbit's Foot | 1 | 1 | Medium | 2 | Basic poke |
-| Ill-Omened Fortune | 2 | 3 | Medium | 3 | Also applies Cursed for 1 round |
+| Lucky Rabbit's Foot | 1 | 1 | 35cm | 2 | Basic poke |
+| Ill-Omened Fortune | 2 | 3 | 35cm | 3 | Also applies Cursed for 1 round |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -158,9 +160,9 @@ Copy this block for any new character.
 | Spade Dig | 1 | 1 | 3 | Quick strike from a tunnel |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Beckoning of the Unlucky | 5 | 1 | 3 | 4 damage; also applies Cursed for 2 rounds |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Beckoning of the Unlucky | 5 | 1 | 3 | 35cm | 4 damage; also applies Cursed for 2 rounds |
 
 ---
 
@@ -179,8 +181,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Gust of Wind | 1 | 1 | Long | 2 | Basic wind blast |
-| Tengu's Gale | 2 | 3 | Long line | 4 | Also applies Weaken for 1 round |
+| Gust of Wind | 1 | 1 | 50cm | 2 | Basic wind blast |
+| Tengu's Gale | 2 | 3 | 50cm | 4 | Also applies Weaken for 1 round |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -188,9 +190,9 @@ Copy this block for any new character.
 | Fan Strike | 1 | 1 | 3 | Quick fan whack |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Illusionary Wind God | 6 | 1 | 3 | 5 damage; Aya may immediately move an additional Speed-derived distance after this resolves (an exception to normal phase order, in the same spirit as the special movement types already allowed under README.md Section 6.1) |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Illusionary Wind God | 6 | 1 | 3 | 40cm | 5 damage to one target; Aya may immediately move an additional Speed-derived distance after this resolves (an exception to normal phase order, in the same spirit as the special movement types already allowed under README.md Section 6.1) |
 
 ---
 
@@ -209,8 +211,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Wind Miracle | 1 | 1 | Medium | 2 | Basic bolt |
-| Water Sign: Suwako's Rain | 2 | 3 | Medium cone | 4 | Wide coverage |
+| Wind Miracle | 1 | 1 | 35cm | 2 | Basic bolt |
+| Water Sign: Suwako's Rain | 2 | 3 | 35cm | 4 | Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE) |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -218,9 +220,9 @@ Copy this block for any new character.
 | Miracle Palm Strike | 1 | 1 | 3 | Divine-empowered strike |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Yasaka's Divine Wind | 6 | 1 | 3 | 4 damage to one target; Sanae also gains Blessed for 2 rounds |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Yasaka's Divine Wind | 6 | 1 | 3 | 35cm | 4 damage to one target; Sanae also gains Blessed for 2 rounds |
 
 ---
 
@@ -239,8 +241,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Aura of Poverty | 1 | 1 | Medium | 2 | Target also loses 1 Spirit |
-| Misfortune's Embrace | 2 | 3 | Medium | 3 | Target also loses 2 Spirit |
+| Aura of Poverty | 1 | 1 | 35cm | 2 | Target also loses 1 Spirit |
+| Misfortune's Embrace | 2 | 3 | 35cm | 3 | Target also loses 2 Spirit |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -248,9 +250,9 @@ Copy this block for any new character.
 | Destitute Grasp | 1 | 1 | 3 | Target also loses 1 Spirit |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Deific Poverty God | 6 | 1 | 3 | 5 damage; target also loses 3 Spirit |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Deific Poverty God | 6 | 1 | 3 | 35cm | 5 damage; target also loses 3 Spirit |
 
 ---
 
@@ -269,8 +271,8 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
 |---|---|---|---|---|---|
-| Butterfly Delusion | 1 | 1 | Medium | 2 | Spread of ghost butterflies |
-| Ghost Sign: Soul Sculpture | 2 | 3 | Medium | 4 | — |
+| Butterfly Delusion | 1 | 1 | 35cm | 2 | Single target for now (canonically a spread — see README.md Section 6.2 on AoE) |
+| Ghost Sign: Soul Sculpture | 2 | 3 | 35cm | 4 | — |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Notes |
@@ -278,9 +280,9 @@ Copy this block for any new character.
 | Fan of the Nine Heavens | 1 | 1 | 3 | — |
 
 **Spell Cards**
-| Name | Spirit Cost | Uses/Game | Tier | Effect |
-|---|---|---|---|---|
-| Perfect Cherry Blossom | 8 | 1 | 3 | 7 damage; also applies Frozen for 1 round. Highest all-in single Spell Card in the roster |
+| Name | Spirit Cost | Uses/Game | Tier | Range | Effect |
+|---|---|---|---|---|---|
+| Perfect Cherry Blossom | 8 | 1 | 3 | 40cm | 7 damage; also applies Frozen for 1 round. Highest all-in single Spell Card in the roster |
 
 ---
 

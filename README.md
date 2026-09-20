@@ -107,10 +107,9 @@
 - [ ] 6 fumo plushies (3 per team)
 - [ ] Character cards for each fumo in play
 - [ ] A B1-size board/mat (~70.7cm x 100cm) marked with three zones
-- [ ] d20s and a smaller die (e.g. d6) for Defense rolls, one set per player
-- [ ] A ruler/tape measure for Movement and Danmaku template placement
+- [ ] d20s for Graze and Defense rolls, one set per player
+- [ ] A ruler/tape measure for Movement and attack range
 - [ ] Spirit trackers (tokens, dice, or a notepad) per fumo
-- [ ] Danmaku templates (cones, lines, rings/bursts)
 
 ### 2.3 Estimated Play Time
 > Roughly 60–120 minutes per game at current round/phase counts. See Appendix for notes on shortening play time (lower round cap, team-activation instead of alternating individual activation, etc.)
@@ -154,12 +153,10 @@
 ### 4.1 Stats Glossary
 | Stat | Description | Range |
 |---|---|---|
-| HP | Health pool; reaching 0 removes the fumo from play | 1–10 (maybe 12 — cap TBD), varies by character |
-| Spirit | Resource spent on attacks, grazing, blocking, and spell cards; regenerates each round | 1–10 (maybe 12 — cap TBD), varies by character (max cap) |
-| Speed | Governs Movement distance and Graze roll target number | 1–10 (maybe 12 — cap TBD), varies by character |
-| Defense | Target number for the Defense Roll — roll below this to succeed (see Section 7.3); the reduction amount on success is flat, not stat-based | 1–10 (maybe 12 — cap TBD), varies by character |
-
-> TODO: Confirm the exact stat cap — 10 or 12 — across HP, Spirit, Speed, and Defense.
+| HP | Health pool; reaching 0 removes the fumo from play | 1–12, varies by character |
+| Spirit | Resource spent on attacks, grazing, blocking, and spell cards; regenerates each round | 1–12, varies by character (max cap) |
+| Speed | Governs Movement distance (Speed × 3cm, see Section 6.1) and Graze roll target number | 1–12, varies by character |
+| Defense | Target number for the Defense Roll — roll below this to succeed (see Section 7.3); the reduction amount on success is flat, not stat-based | 1–12, varies by character |
 
 ### 4.2 Spirit
 #### 4.2.1 Starting Spirit / Max Cap
@@ -229,15 +226,19 @@
 ## 6. Phases (Per Activation)
 
 ### 6.1 Movement Phase
-> The active fumo may move up to its Speed-derived Movement distance. This includes any special movement types granted by its kit (flight, dash, teleport, etc.).
+> The active fumo may move up to its Movement distance: **Speed stat × 3cm**. This includes any special movement types granted by its kit (flight, dash, teleport, etc.).
+>
+> Sanity check: Cirno (Speed 8) moves 24cm per activation — 96cm over 4 activations, enough to cross the full ~100cm board (Section 3.2) in 4 turns, since a fumo's own footprint means it doesn't need to travel the literal full length to reach the far zone.
 
 ### 6.2 Danmaku Phase
-> The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and place its template based on range and facing. The defender (or any fumo caught in the template) may react live with a Graze attempt, a Block, or take the hit outright, following the Combat Resolution sequence in Section 7.
+> The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and pick one enemy fumo within that move's range (a plain cm distance, listed on the character's card — see the Codex). No templates or facing for now — range is a simple distance check, and attacks are single-target only (no AoE). The defender may react live with a Graze attempt, a Block, or take the hit outright, following the Combat Resolution sequence in Section 7.
+>
+> Range (and Movement, and melee range) is measured base-to-base: nearest edge of the attacker's base to nearest edge of the target's base.
 >
 > Unavailable this activation if the fumo is declaring a Spell Card (Section 6.4) — see the note there.
 
 ### 6.3 Melee Phase
-> If the active fumo is within melee range of a target after Movement, it may make one melee attack, following the same choose-move/pay-cost/react structure as the Danmaku Phase.
+> Melee range is a flat **10cm**. If the active fumo has an enemy within that range after Movement, it may make one melee attack against that target, following the same choose-move/pay-cost/react structure as the Danmaku Phase. Single-target only, like Danmaku.
 >
 > Unavailable this activation if the fumo is declaring a Spell Card (Section 6.4) — see the note there.
 
@@ -251,8 +252,8 @@
 ## 7. Combat Resolution
 
 ### 7.1 Attack Sequence (Step by Step)
-1. Attacker declares a move (Danmaku or Melee), paying its Spirit cost.
-2. Attacker places the attack's template or confirms melee range.
+1. Attacker declares a move (Danmaku or Melee) against one target, paying its Spirit cost.
+2. Attacker confirms the target is within the move's range (Danmaku) or within 10cm (Melee) — see Section 6.2.
 3. Defender declares a reaction: Graze, Block, or none (per the attack's Tier restrictions).
 4. Resolve the declared reaction (Graze roll, Block, or proceed directly to the Defense Roll).
 5. Apply remaining damage to the defender's HP, and deduct any Spirit spent by either party.
@@ -447,7 +448,7 @@ flowchart TD
 **Combat Resolution**
 ```mermaid
 flowchart TD
-    A(["Attacker declares move, pays Spirit (7.1)"]) --> B["Place template / confirm melee range"]
+    A(["Attacker declares move, pays Spirit (7.1)"]) --> B["Confirm target within range (Danmaku) or 10cm (Melee)"]
     B --> C{"Attack Tier?"}
     C -->|"Tier 3"| G["Defense Roll: d20 vs Defense stat (7.3)"]
     C -->|"Tier 1 or 2"| D{"Defender's reaction"}
@@ -513,6 +514,9 @@ A:
 | 0.9 | | Dropped the ~30cm/~40cm/~30cm zone depth rule (Section 3.3) — zones are now pre-marked on the physical board rather than measured out |
 | 0.10 | | Filled in Status Effects (Section 7.6): Frozen, Frostbite, Burnt, Sealed, Cursed, Blessed, Weaken keywords, each with duration set per-application in the Codex (capped at 3 rounds). Defense Roll success (Section 7.3) reworked to a flat 2 damage reduction — the Defense stat now only sets the roll's target number, not the reduction amount |
 | 0.11 | | Danmaku/Melee attacks and Spell Cards are now mutually exclusive per activation (Section 6.4) — declaring a Spell Card rules out attacking that activation, and vice versa. Movement is unaffected |
+| 0.12 | | Defined the Movement formula (Section 6.1): Speed × 3cm, calibrated so Speed 8 crosses the ~100cm board in 4 activations |
+| 0.13 | | Removed Danmaku templates and facing (Sections 2.2, 6.2, 6.3, 7.1): attacks are now single-target only, with range as a plain cm distance (melee fixed at 10cm), measured base-to-base. No AoE for now. Also fixed a stale equipment note that still called for a d6 on Defense rolls after Section 7.3 moved to d20 |
+| 0.14 | | Stat cap locked at 12 across HP, Spirit, Speed, and Defense (Section 4.1) |
 
 ### 12.6 Credits
 > ゆめねぎ
