@@ -522,5 +522,5 @@ A:
 | 0.17 | | Starting team now alternates every round (Section 3.5) instead of staying fixed all game — the coin toss only decides who starts Round 1, then it swaps automatically each round (no re-tossing). This fixes the last-activates-final-say issue from 0.16: that advantage now swaps sides each round (Section 8.3.2) instead of sitting with one team all game |
 
 ### 12.6 Credits
-> ゆめねぎ
+> ゆめねぎ  
 > 上海アリス幻樂団
