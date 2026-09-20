@@ -275,7 +275,7 @@ function render() {
     ${renderHeader()}
     <div class="teams-row">${renderTeam('A')}${renderTeam('B')}</div>
     <div class="sites-row">${renderSites()}${renderObjectives()}</div>
-    <footer>State saves automatically to this browser only. See README.md / codex.md for full rules.</footer>`;
+    <footer>State saves automatically to this browser only. Full rules and roster: <a href="https://github.com/yumenegi/fumohammer" target="_blank" rel="noopener">github.com/yumenegi/fumohammer</a></footer>`;
 }
 
 function getFumo(team, idx) { return state.teams[team].fumos[idx]; }

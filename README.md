@@ -112,6 +112,8 @@
 - [ ] A ruler/tape measure for Movement and attack range
 - [ ] Spirit trackers (tokens, dice, or a notepad) per fumo
 
+> **Match Tracker:** a browser-based tracker is hosted at [play.eientei.reisen](https://play.eientei.reisen/) — HP, Spirit, status effects, Artifact/Objective Points, and a d20 roller, for all 6 fumo slots. It's optional (nothing here requires it — tokens and a notepad work fine), but it auto-applies Spirit regen and status-effect ticks at the Start of Round so you don't have to recompute the ramp table by hand. Source is in this repo (`index.html`, `app.js`, `characters.yaml`).
+
 ### 2.3 Estimated Play Time
 > Roughly 60–120 minutes per game at current round/phase counts.
 
@@ -541,6 +543,7 @@ A:
 | 0.21 | | Removed Block as a separately declared action (Sections 4.5, 7.4) — it's no longer chosen or Spirit-costed. A Block is now just what a natural 1 on the Defense Roll (Section 7.3) means, for an attack of any Tier. Attack Sequence (7.1), the Danmaku Phase (6.2), and the Combat Resolution diagram (12.1) updated to match — defender now only ever declares whether to attempt a Graze. Reworded Kaguya's Wrath (8.3.1) accordingly: it denies Graze and downgrades a Nat 1 against it to an ordinary success rather than a Block. Also fixed a stale "flat Defense stat" label in the combat diagram (should've read "flat 2" since 0.10) and two leftover "Spirit spent on... blocking" mentions |
 | 0.22 | | Implemented AoE (Section 4.3.1, new): Direct (single-target, as before), Small Arc (90°), Large Arc (180°), and Annihilate (360°, facing-independent) attack Types, each hitting every enemy fumo within its shape and range, resolving Graze/Defense independently per target against one shared Spirit cost. Added Facing (Section 6.1) — read directly off the fumo's own face/eyes, no marker needed; turnable freely during a fumo's own Movement Phase, locked for the rest of that activation, centers Small/Large Arc. Updated the Danmaku/Melee Phases (6.2, 6.3) and Attack Sequence (7.1) for multi-target resolution. All 8 roster characters are still Type: direct in characters.yaml — none reclassified to an arc yet |
 | 0.23 | | Reclassified the four moves whose notes already flagged them as canonically AoE (characters.yaml): Reimu's Fantasy Seal and Sanae's Water Sign: Suwako's Rain to Large Arc, Marisa's Master Spark and Yuyuko's Butterfly Delusion to Small Arc. Damage/cost numbers unchanged — these are now stronger than a Direct move of the same cost against multiple enemies, which isn't accounted for yet; still an open balance question for the first playtest |
+| 0.24 | | Linked the hosted Match Tracker (Section 2.2) — https://play.eientei.reisen/ |
 
 ### 12.6 Credits
 > ゆめねぎ  
