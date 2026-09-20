@@ -1,5 +1,9 @@
 # Single source of truth for character/artifact/status data.
 # Feeds both the webapp (app.js) and codex.md (via generate-codex.js).
+#
+# Every attack (danmaku/melee/spellCard) has a `type`. Only "direct" (single-target) is
+# implemented right now. Reserved for later: "small arc" (90 degree), "large arc" (180
+# degree), "annihilate" (full circle) — AoE resolution and facing rules aren't written yet.
 characters:
   - name: Cirno
     nativeFaction: Gensokyolites
@@ -10,12 +14,12 @@ characters:
     speed: 8
     defense: 3
     danmaku:
-      - { name: Icicle Fall, tier: 1, cost: 1, range: 20, damage: 2, notes: Freely grazeable poke }
-      - { name: "Ice Sign: Icicle Machine Gun", tier: 2, cost: 3, range: 35, damage: 4, notes: Rapid volley }
+      - { name: Icicle Fall, tier: 1, cost: 1, range: 20, damage: 2, type: direct, notes: Freely grazeable poke }
+      - { name: "Ice Sign: Icicle Machine Gun", tier: 2, cost: 3, range: 35, damage: 4, type: direct, notes: Rapid volley }
     melee:
-      - { name: Frozen Fist, tier: 1, cost: 1, damage: 3, notes: Close-range ice punch }
+      - { name: Frozen Fist, tier: 1, cost: 1, damage: 3, type: direct, notes: Close-range ice punch }
     spellCards:
-      - { name: Perfect Freeze, cost: 6, uses: 1, tier: 3, range: 35, effect: "6 damage to one target; also applies Frozen for 1 round (see README.md Section 7.6)" }
+      - { name: Perfect Freeze, cost: 6, uses: 1, tier: 3, range: 35, type: direct, effect: "6 damage to one target; also applies Frozen for 1 round (see README.md Section 7.6)" }
 
   - name: Reimu Hakurei
     nativeFaction: Gensokyolites
@@ -26,12 +30,12 @@ characters:
     speed: 3
     defense: 8
     danmaku:
-      - { name: Homing Amulet, tier: 1, cost: 1, range: 35, damage: 2, notes: Curves slightly toward its target }
-      - { name: Persuasion Needle, tier: 2, cost: 3, range: 35, damage: 4, notes: Rapid needle volley }
+      - { name: Homing Amulet, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: Curves slightly toward its target }
+      - { name: Persuasion Needle, tier: 2, cost: 3, range: 35, damage: 4, type: direct, notes: Rapid needle volley }
     melee:
-      - { name: Gohei Strike, tier: 1, cost: 1, damage: 3, notes: Exorcism wand strike }
+      - { name: Gohei Strike, tier: 1, cost: 1, damage: 3, type: direct, notes: Exorcism wand strike }
     spellCards:
-      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, effect: "5 damage to one target. (Canonically a spread attack; single-target for now since AoE isn't supported yet — see README.md Section 6.2)" }
+      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, type: direct, effect: "5 damage to one target. (Canonically a spread attack; single-target for now since AoE isn't supported yet — see README.md Section 6.2)" }
 
   - name: Marisa Kirisame
     nativeFaction: Gensokyolites
@@ -42,12 +46,12 @@ characters:
     speed: 8
     defense: 4
     danmaku:
-      - { name: Magic Missile, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
-      - { name: Illusion Laser, tier: 2, cost: 3, range: 50, damage: 4, notes: Thin piercing beam }
+      - { name: Magic Missile, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: Basic bolt }
+      - { name: Illusion Laser, tier: 2, cost: 3, range: 50, damage: 4, type: direct, notes: Thin piercing beam }
     melee:
-      - { name: Broom Whack, tier: 1, cost: 1, damage: 2, notes: "Weakest melee in the roster — Marisa isn't built for close range" }
+      - { name: Broom Whack, tier: 1, cost: 1, damage: 2, type: direct, notes: "Weakest melee in the roster — Marisa isn't built for close range" }
     spellCards:
-      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, effect: "8 damage to one target (highest single hit in the roster). (Canonically a piercing beam; single-target for now since AoE isn't supported yet — see README.md Section 6.2). Costs nearly all of Marisa's Spirit cap in one shot" }
+      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, type: direct, effect: "8 damage to one target (highest single hit in the roster). (Canonically a piercing beam; single-target for now since AoE isn't supported yet — see README.md Section 6.2). Costs nearly all of Marisa's Spirit cap in one shot" }
 
   - name: Tewi Inaba
     nativeFaction: Gensokyolites
@@ -58,12 +62,12 @@ characters:
     speed: 9
     defense: 3
     danmaku:
-      - { name: "Lucky Rabbit's Foot", tier: 1, cost: 1, range: 35, damage: 2, notes: Basic poke }
-      - { name: Ill-Omened Fortune, tier: 2, cost: 3, range: 35, damage: 3, notes: Also applies Cursed for 1 round }
+      - { name: "Lucky Rabbit's Foot", tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: Basic poke }
+      - { name: Ill-Omened Fortune, tier: 2, cost: 3, range: 35, damage: 3, type: direct, notes: Also applies Cursed for 1 round }
     melee:
-      - { name: Spade Dig, tier: 1, cost: 1, damage: 3, notes: Quick strike from a tunnel }
+      - { name: Spade Dig, tier: 1, cost: 1, damage: 3, type: direct, notes: Quick strike from a tunnel }
     spellCards:
-      - { name: Beckoning of the Unlucky, cost: 5, uses: 1, tier: 3, range: 35, effect: "4 damage; also applies Cursed for 2 rounds" }
+      - { name: Beckoning of the Unlucky, cost: 5, uses: 1, tier: 3, range: 35, type: direct, effect: "4 damage; also applies Cursed for 2 rounds" }
 
   - name: Aya Shameimaru
     nativeFaction: Gensokyolites
@@ -74,12 +78,12 @@ characters:
     speed: 10
     defense: 3
     danmaku:
-      - { name: Gust of Wind, tier: 1, cost: 1, range: 50, damage: 2, notes: Basic wind blast }
-      - { name: "Tengu's Gale", tier: 2, cost: 3, range: 50, damage: 4, notes: Also applies Weaken for 1 round }
+      - { name: Gust of Wind, tier: 1, cost: 1, range: 50, damage: 2, type: direct, notes: Basic wind blast }
+      - { name: "Tengu's Gale", tier: 2, cost: 3, range: 50, damage: 4, type: direct, notes: Also applies Weaken for 1 round }
     melee:
-      - { name: Fan Strike, tier: 1, cost: 1, damage: 3, notes: Quick fan whack }
+      - { name: Fan Strike, tier: 1, cost: 1, damage: 3, type: direct, notes: Quick fan whack }
     spellCards:
-      - { name: Illusionary Wind God, cost: 6, uses: 1, tier: 3, range: 40, effect: "5 damage to one target; Aya may immediately move an additional Speed-derived distance after this resolves (an exception to normal phase order, in the same spirit as the special movement types already allowed under README.md Section 6.1)" }
+      - { name: Illusionary Wind God, cost: 6, uses: 1, tier: 3, range: 40, type: direct, effect: "5 damage to one target; Aya may immediately move an additional Speed-derived distance after this resolves (an exception to normal phase order, in the same spirit as the special movement types already allowed under README.md Section 6.1)" }
 
   - name: Sanae Kochiya
     nativeFaction: Gensokyolites
@@ -90,12 +94,12 @@ characters:
     speed: 6
     defense: 7
     danmaku:
-      - { name: Wind Miracle, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
-      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, notes: "Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE)" }
+      - { name: Wind Miracle, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: Basic bolt }
+      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, type: direct, notes: "Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE)" }
     melee:
-      - { name: Miracle Palm Strike, tier: 1, cost: 1, damage: 3, notes: Divine-empowered strike }
+      - { name: Miracle Palm Strike, tier: 1, cost: 1, damage: 3, type: direct, notes: Divine-empowered strike }
     spellCards:
-      - { name: Yasaka's Divine Wind, cost: 6, uses: 1, tier: 3, range: 35, effect: "4 damage to one target; Sanae also gains Blessed for 2 rounds" }
+      - { name: Yasaka's Divine Wind, cost: 6, uses: 1, tier: 3, range: 35, type: direct, effect: "4 damage to one target; Sanae also gains Blessed for 2 rounds" }
 
   - name: Yorigami Shion
     nativeFaction: Gensokyolites
@@ -106,12 +110,12 @@ characters:
     speed: 6
     defense: 5
     danmaku:
-      - { name: Aura of Poverty, tier: 1, cost: 1, range: 35, damage: 2, notes: Target also loses 1 Spirit }
-      - { name: Misfortune's Embrace, tier: 2, cost: 3, range: 35, damage: 3, notes: Target also loses 2 Spirit }
+      - { name: Aura of Poverty, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: Target also loses 1 Spirit }
+      - { name: Misfortune's Embrace, tier: 2, cost: 3, range: 35, damage: 3, type: direct, notes: Target also loses 2 Spirit }
     melee:
-      - { name: Destitute Grasp, tier: 1, cost: 1, damage: 3, notes: Target also loses 1 Spirit }
+      - { name: Destitute Grasp, tier: 1, cost: 1, damage: 3, type: direct, notes: Target also loses 1 Spirit }
     spellCards:
-      - { name: Deific Poverty God, cost: 6, uses: 1, tier: 3, range: 35, effect: "5 damage; target also loses 3 Spirit" }
+      - { name: Deific Poverty God, cost: 6, uses: 1, tier: 3, range: 35, type: direct, effect: "5 damage; target also loses 3 Spirit" }
 
   - name: Yuyuko Saigyouji
     nativeFaction: Gensokyolites
@@ -122,12 +126,12 @@ characters:
     speed: 5
     defense: 7
     danmaku:
-      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, notes: "Single target for now (canonically a spread — see README.md Section 6.2 on AoE)" }
-      - { name: "Ghost Sign: Soul Sculpture", tier: 2, cost: 3, range: 35, damage: 4, notes: "" }
+      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: "Single target for now (canonically a spread — see README.md Section 6.2 on AoE)" }
+      - { name: "Ghost Sign: Soul Sculpture", tier: 2, cost: 3, range: 35, damage: 4, type: direct, notes: "" }
     melee:
-      - { name: Fan of the Nine Heavens, tier: 1, cost: 1, damage: 3, notes: "" }
+      - { name: Fan of the Nine Heavens, tier: 1, cost: 1, damage: 3, type: direct, notes: "" }
     spellCards:
-      - { name: Perfect Cherry Blossom, cost: 8, uses: 1, tier: 3, range: 40, effect: "7 damage; also applies Frozen for 1 round. Highest all-in single Spell Card in the roster" }
+      - { name: Perfect Cherry Blossom, cost: 8, uses: 1, tier: 3, range: 40, type: direct, effect: "7 damage; also applies Frozen for 1 round. Highest all-in single Spell Card in the roster" }
 
 # The six-artifact pool from README.md Section 8.3.1.
 artifacts:
