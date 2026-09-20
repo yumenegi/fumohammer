@@ -127,14 +127,14 @@
 
 ### 3.2 The Board
 - Size: B1 (~70.7cm x 100cm)
-- Layout: the board's long axis is divided into three bands — a home zone for each team on either end, with a contested zone at the midpoint
+- Layout: the board comes pre-marked with three zones along its long axis — a home zone for each team on either end, with the Bamboo Forest of the Lost at the midpoint. Zone boundaries are fixed by the board's own artwork, not derived from a measurement rule.
 
 ### 3.3 Zones
-| Zone | Location | Depth/Size | Notes |
-|---|---|---|---|
-| Gensokyo Zone | One end of the board | ~30cm | Side A home/objective zone |
-| Bamboo Forest of the Lost | Midpoint | ~40cm | Neutral skirmish zone; grants a Spirit bonus to occupants |
-| Lunar Capital | Opposite end of the board | ~30cm | Side B home/objective zone |
+| Zone | Location | Notes |
+|---|---|---|
+| Gensokyo Zone | One end of the board | Side A home/objective zone |
+| Bamboo Forest of the Lost | Midpoint | Neutral skirmish zone; grants a Spirit bonus to occupants |
+| Lunar Capital | Opposite end of the board | Side B home/objective zone |
 
 ### 3.4 Deployment
 > Each team deploys its 3 fumos within its own home zone before the game begins.
@@ -487,6 +487,7 @@ A:
 | 0.6 | | Filled in Objective Control Rules (Section 8.5) as a fully standalone section: 6 Objective Points to capture an enemy home zone, with its own contested/attacked-pause and vacate-reset rules. Artifact Capture Rules (Section 8.3.2) rewritten standalone too, capped at +2 Capture Points/round regardless of fumo count. The two are separate counters, each explained independently rather than cross-referenced |
 | 0.7 | | Filled in Quick Reference Sheet (Section 12.1) with Mermaid flowcharts for Round Structure and Combat Resolution |
 | 0.8 | | Replaced Faction Locking (Section 9.2, renamed Faction Affinity) with free faction assignment plus a bonus for matching a fumo's Native Faction; bonus effect and magnitude left TODO |
+| 0.9 | | Dropped the ~30cm/~40cm/~30cm zone depth rule (Section 3.3) — zones are now pre-marked on the physical board rather than measured out |
 
 ### 12.6 Credits
 > ゆめねぎ
