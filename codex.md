@@ -85,8 +85,8 @@ Copy this block for any new character.
 |---|---|
 | HP | 9 |
 | Spirit (max cap) | 8 |
-| Speed | 7 |
-| Defense | 6 |
+| Speed | 3 |
+| Defense | 8 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
@@ -146,7 +146,7 @@ Copy this block for any new character.
 | HP | 7 |
 | Spirit (max cap) | 7 |
 | Speed | 9 |
-| Defense | 5 |
+| Defense | 3 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
@@ -206,7 +206,7 @@ Copy this block for any new character.
 | HP | 8 |
 | Spirit (max cap) | 8 |
 | Speed | 6 |
-| Defense | 6 |
+| Defense | 7 |
 
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Notes |
@@ -235,7 +235,7 @@ Copy this block for any new character.
 |---|---|
 | HP | 8 |
 | Spirit (max cap) | 7 |
-| Speed | 5 |
+| Speed | 6 |
 | Defense | 5 |
 
 **Danmaku Moves**
