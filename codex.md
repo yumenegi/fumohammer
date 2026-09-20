@@ -1,9 +1,11 @@
 # FUMOHAMMER CODEX
 ### Character Roster — Draft v0.1
 
-> Companion document to [rules.md](rules.md) — see Section 9 (Character Cards) and Section 10 (Roster) there for how these cards plug into the systems. This file holds the actual stat blocks; the rulebook only defines what the fields mean.
+> Companion document to [README.md](README.md) — see Section 9 (Character Cards) and Section 10 (Roster) there for how these cards plug into the systems. This file holds the actual stat blocks; the rulebook only defines what the fields mean.
 
-> **Note on numbers:** rules.md hasn't finalized base damage/HP magnitudes yet (see its Section 12.5 changelog and the open balance questions from early drafting). The values below use the stat cap already locked in (1–10, maybe 12 — rules.md Section 4.1) and a damage range consistent with that cap, but treat every number here as provisional until a playtest confirms the base math.
+> **Note on numbers:** README.md hasn't finalized base damage/HP magnitudes yet (see its Section 12.5 changelog and the open balance questions from early drafting). The values below use the stat cap already locked in (1–10, maybe 12 — README.md Section 4.1) and a damage range consistent with that cap, but treat every number here as provisional until a playtest confirms the base math.
+
+> **Status effects:** README.md Section 7.6 defines the Frozen, Frostbite, Burnt, Sealed, Cursed, Blessed, and Weaken keywords, but each application's *duration* (in rounds, capped at 3) is set here on the specific move or Spell Card that inflicts it — write it directly into that move's Notes/Effect column, e.g. "Applies Frostbite for 2 rounds."
 
 ---
 
@@ -12,7 +14,7 @@
 Copy this block for any new character.
 
 **[Name]**
-- **Native Faction:** Gensokyolites / Lunarians / Flexible — flavor + triggers the match bonus in rules.md Section 9.2. Does not restrict which team the fumo can actually be assigned to.
+- **Native Faction:** Gensokyolites / Lunarians / Flexible — flavor + triggers the match bonus in README.md Section 9.2. Does not restrict which team the fumo can actually be assigned to.
 - **Zone Affinity:** —
 - **Lore blurb:** —
 
@@ -33,7 +35,7 @@ Copy this block for any new character.
 |---|---|---|---|---|
 | | | | | |
 
-**Spell Cards** (uses per game — rules.md Section 4.7)
+**Spell Cards** (uses per game — README.md Section 4.7)
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
 | | | | | |
@@ -68,7 +70,7 @@ Copy this block for any new character.
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| Perfect Freeze | 6 | 1 | 3 | 6 damage to one target; TODO — intended to also apply a "frozen" status (−2 Speed for 1 round), but rules.md's Status Effects table (Section 7.6) is still empty, so this half of the effect has no ruleset to plug into yet |
+| Perfect Freeze | 6 | 1 | 3 | 6 damage to one target; also applies Frozen for 1 round (see README.md Section 7.6) |
 
 ---
 
@@ -98,7 +100,7 @@ Copy this block for any new character.
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Effect |
 |---|---|---|---|---|
-| Fantasy Seal | 5 | 2 | 3 | 5 damage; template hits every enemy fumo caught in it, not just one target (existing template-based multi-hit already supported per rules.md Section 6.2) |
+| Fantasy Seal | 5 | 2 | 3 | 5 damage; template hits every enemy fumo caught in it, not just one target (existing template-based multi-hit already supported per README.md Section 6.2) |
 
 ---
 
@@ -284,6 +286,6 @@ Copy this block for any new character.
 
 ## Notes
 
-- All eight characters here are canonically Gensokyo residents — none are Lunarians. Since faction assignment is now free (rules.md Section 9.2), any of them can still be fielded on Side B; they just won't get the Native Faction match bonus there. Worth deciding whether that's fine as-is, or whether you want at least one lunar-affiliated card (e.g. an Eirin/Kaguya/Reisen-type kit) in the pool so Side B has a shot at the bonus too.
-- The Native Faction match bonus itself (Section 9.2) is still a TODO in rules.md — no effect or magnitude defined yet.
-- Spell Card damage and Spirit costs above assume the stat caps already locked into rules.md (Section 4.1); they have not been playtested.
+- All eight characters here are canonically Gensokyo residents — none are Lunarians. Since faction assignment is now free (README.md Section 9.2), any of them can still be fielded on Side B; they just won't get the Native Faction match bonus there. Worth deciding whether that's fine as-is, or whether you want at least one lunar-affiliated card (e.g. an Eirin/Kaguya/Reisen-type kit) in the pool so Side B has a shot at the bonus too.
+- The Native Faction match bonus itself (Section 9.2) is still a TODO in README.md — no effect or magnitude defined yet.
+- Spell Card damage and Spirit costs above assume the stat caps already locked into README.md (Section 4.1); they have not been playtested.

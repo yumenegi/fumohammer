@@ -116,7 +116,7 @@
 > Roughly 60–120 minutes per game at current round/phase counts. See Appendix for notes on shortening play time (lower round cap, team-activation instead of alternating individual activation, etc.)
 
 ### 2.4 Game Loop Summary
-> Each round: all fumos regenerate Spirit simultaneously → fumos activate one at a time in alternating order, each running through Movement, Danmaku, Melee, and Spell Card phases → at the end of the round, objective control is tallied and win conditions are checked. Repeat until a team wins.
+> Each round: all fumos regenerate Spirit simultaneously → fumos activate one at a time in alternating order, each running through Movement, then either Danmaku and/or Melee, or a Spell Card (not both — see Section 6.4) → at the end of the round, objective control is tallied and win conditions are checked. Repeat until a team wins.
 
 ---
 
@@ -157,7 +157,7 @@
 | HP | Health pool; reaching 0 removes the fumo from play | 1–10 (maybe 12 — cap TBD), varies by character |
 | Spirit | Resource spent on attacks, grazing, blocking, and spell cards; regenerates each round | 1–10 (maybe 12 — cap TBD), varies by character (max cap) |
 | Speed | Governs Movement distance and Graze roll target number | 1–10 (maybe 12 — cap TBD), varies by character |
-| Defense | Damage reduction on a successful Defense Roll (see Section 7.3) | 1–10 (maybe 12 — cap TBD), varies by character |
+| Defense | Target number for the Defense Roll — roll below this to succeed (see Section 7.3); the reduction amount on success is flat, not stat-based | 1–10 (maybe 12 — cap TBD), varies by character |
 
 > TODO: Confirm the exact stat cap — 10 or 12 — across HP, Spirit, Speed, and Defense.
 
@@ -207,7 +207,7 @@
 ## 5. The Round Structure
 
 ### 5.1 Round Overview Diagram
-> Start of Round (Spirit regen + zone bonuses + ongoing effects) → Activations (each fumo, alternating teams, runs Movement → Danmaku → Melee → Spell Card) → End of Round (objective tally + win condition check) → repeat.
+> Start of Round (Spirit regen + zone bonuses + ongoing effects) → Activations (each fumo, alternating teams, runs Movement → (Danmaku and/or Melee) OR Spell Card, not both) → End of Round (objective tally + win condition check) → repeat.
 
 ### 5.2 Start of Round
 - [ ] Coin toss to determine this round's starting team (see Section 3.5)
@@ -233,12 +233,18 @@
 
 ### 6.2 Danmaku Phase
 > The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and place its template based on range and facing. The defender (or any fumo caught in the template) may react live with a Graze attempt, a Block, or take the hit outright, following the Combat Resolution sequence in Section 7.
+>
+> Unavailable this activation if the fumo is declaring a Spell Card (Section 6.4) — see the note there.
 
 ### 6.3 Melee Phase
 > If the active fumo is within melee range of a target after Movement, it may make one melee attack, following the same choose-move/pay-cost/react structure as the Danmaku Phase.
+>
+> Unavailable this activation if the fumo is declaring a Spell Card (Section 6.4) — see the note there.
 
 ### 6.4 Spell Card Phase
 > The active fumo may declare a Spell Card if it has uses remaining, paying its Spirit cost and resolving its effect.
+>
+> **A fumo that declares a Spell Card this activation may not also make a Danmaku or Melee attack that same activation, and vice versa** — attacking normally (Danmaku and/or Melee) and declaring a Spell Card are mutually exclusive per activation. Movement (Section 6.1) is unaffected either way.
 
 ---
 
@@ -260,7 +266,7 @@
 ### 7.3 Defense Roll
 - Die: d20
 - Target: roll lower than the defender's Defense stat
-- Success effect: defense succeeds — damage reduced by the defender's flat Defense stat
+- Success effect: defense succeeds — damage reduced by 2 (flat, same for every character; the Defense stat only sets the roll's target number)
 - Failure effect: defense fails — full damage taken, unreduced
 - Critical (Nat 1) effect: Perfect Defense — attack negated entirely, zero damage taken, regardless of Defense stat
 - Critical (Nat 20) effect: damage doubled before any other mitigation
@@ -274,9 +280,19 @@
 > Damage remaining after Graze/Block/Defense mitigation is subtracted from the defender's current HP. A fumo reduced to 0 HP is removed from play.
 
 ### 7.6 Status Effects
+> Status effects are inflicted by specific moves and Spell Cards, not by a generic rule — see the character's entry in the Codex for which of its attacks apply which effect. Each application specifies its own duration in rounds; no single application may exceed 3 rounds. A fumo can be affected by more than one status effect at once, each tracked (and expiring) independently.
+>
+> Damage-over-time effects (Frostbite, Burnt) apply directly at the Start of Round (Section 5.2), with no Graze, Block, or Defense Roll against them. A status effect's remaining duration ticks down by 1 at the Start of Round, after that round's tick (if any) is applied; at 0 it's removed.
+
 | Effect | Trigger | Duration | Rules |
 |---|---|---|---|
-| | | | |
+| Frozen | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Skips its entire next activation — no Movement, Danmaku, Melee, or Spell Card phase |
+| Frostbite | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | At the Start of Round, take 1 damage; Speed is reduced by 1 for as long as this effect lasts |
+| Burnt | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | At the Start of Round, take 2 damage |
+| Sealed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | May still move during its activation, but skips its Danmaku and Melee phases (cannot attack) |
+| Cursed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Every d20 roll this fumo makes (Graze or Defense) is doubled after rolling, before comparing to the target number |
+| Blessed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Every d20 roll this fumo makes (Graze or Defense) is halved (round down) after rolling, before comparing to the target number |
+| Weaken | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Defense stat is reduced by 1 for as long as this effect lasts |
 
 ---
 
@@ -419,7 +435,7 @@ flowchart TD
     A(["Coin toss - starting team (3.5)"]) --> B["Start of Round: Spirit regen, Bamboo Forest bonus (5.2)"]
     B --> C{"Fumos left to activate this round?"}
     C -->|Yes| D["Next fumo activates (turn order alternates between teams, 3.5)"]
-    D --> E["Movement -> Danmaku -> Melee -> Spell Card (Section 6)"]
+    D --> E["Movement -> (Danmaku and/or Melee) OR Spell Card, not both (Section 6)"]
     E --> C
     C -->|No| F["End of Round: tally Objective Points (8.5) and Capture Points (8.3.2), check win conditions (11.3)"]
     F --> G{"Team Knockout or Objective Victory?"}
@@ -475,6 +491,13 @@ A:
 | Artifact Site | One of three locations within the Bamboo Forest of the Lost that can be captured for a persistent bonus (see Section 8.3.1) |
 | Capture Point | Progress toward capturing an Artifact Site, gained per occupying fumo at End of Round, capped at +2/round (see Section 8.3.2) |
 | Objective Point | Progress toward Objective Control of an enemy home zone, gained per occupying fumo at End of Round, capped at +2/round — separate from Capture Points (see Section 8.5) |
+| Frozen | Status effect: skips the fumo's entire next activation (see Section 7.6) |
+| Frostbite | Status effect: 1 damage per round and −1 Speed while active (see Section 7.6) |
+| Burnt | Status effect: 2 damage per round while active (see Section 7.6) |
+| Sealed | Status effect: fumo may still move but cannot attack while active (see Section 7.6) |
+| Cursed | Status effect: the fumo's d20 rolls are doubled while active (see Section 7.6) |
+| Blessed | Status effect: the fumo's d20 rolls are halved (round down) while active (see Section 7.6) |
+| Weaken | Status effect: −1 Defense stat while active (see Section 7.6) |
 
 ### 12.5 Changelog / Version History
 | Version | Date | Changes |
@@ -488,6 +511,8 @@ A:
 | 0.7 | | Filled in Quick Reference Sheet (Section 12.1) with Mermaid flowcharts for Round Structure and Combat Resolution |
 | 0.8 | | Replaced Faction Locking (Section 9.2, renamed Faction Affinity) with free faction assignment plus a bonus for matching a fumo's Native Faction; bonus effect and magnitude left TODO |
 | 0.9 | | Dropped the ~30cm/~40cm/~30cm zone depth rule (Section 3.3) — zones are now pre-marked on the physical board rather than measured out |
+| 0.10 | | Filled in Status Effects (Section 7.6): Frozen, Frostbite, Burnt, Sealed, Cursed, Blessed, Weaken keywords, each with duration set per-application in the Codex (capped at 3 rounds). Defense Roll success (Section 7.3) reworked to a flat 2 damage reduction — the Defense stat now only sets the roll's target number, not the reduction amount |
+| 0.11 | | Danmaku/Melee attacks and Spell Cards are now mutually exclusive per activation (Section 6.4) — declaring a Spell Card rules out attacking that activation, and vice versa. Movement is unaffected |
 
 ### 12.6 Credits
 > ゆめねぎ
