@@ -143,7 +143,7 @@ function renderSpellCards(fumo, team, idx) {
   if (!preset || !preset.spellCards.length) return '';
   return preset.spellCards.map((sc, i) => `
     <div class="spell-row">
-      <span><strong>${escapeHtml(sc.name)}</strong> (T${sc.tier}, ${sc.cost} spirit, ${sc.range}cm) — uses: ${fumo.spellUses[sc.name] ?? sc.uses}/${sc.uses}</span>
+      <span><strong>${escapeHtml(sc.name)}</strong> (T${sc.tier}, ${sc.cost} spirit, ${sc.range}cm, ${sc.type}) — uses: ${fumo.spellUses[sc.name] ?? sc.uses}/${sc.uses}</span>
       <button data-action="use-spell" data-team="${team}" data-idx="${idx}" data-spell-idx="${i}">Use</button>
       <button data-action="restore-spell" data-team="${team}" data-idx="${idx}" data-spell-idx="${i}">Undo</button>
       <div class="spell-effect">${escapeHtml(sc.effect)}</div>
@@ -153,13 +153,13 @@ function renderSpellCards(fumo, team, idx) {
 function renderMoveTable(fumo) {
   const preset = fumo.presetIndex >= 0 ? CHARACTER_PRESETS[fumo.presetIndex] : null;
   if (!preset) return '';
-  const danmaku = preset.danmaku.map(m => `<tr><td>${escapeHtml(m.name)}</td><td>T${m.tier}</td><td>${m.cost}</td><td>${m.range}cm</td><td>${m.damage}</td><td>${escapeHtml(m.notes)}</td></tr>`).join('');
-  const melee = preset.melee.map(m => `<tr><td>${escapeHtml(m.name)}</td><td>T${m.tier}</td><td>${m.cost}</td><td>—</td><td>${m.damage}</td><td>${escapeHtml(m.notes)}</td></tr>`).join('');
+  const danmaku = preset.danmaku.map(m => `<tr><td>${escapeHtml(m.name)}</td><td>T${m.tier}</td><td>${m.cost}</td><td>${m.range}cm</td><td>${m.damage}</td><td>${escapeHtml(m.type)}</td><td>${escapeHtml(m.notes)}</td></tr>`).join('');
+  const melee = preset.melee.map(m => `<tr><td>${escapeHtml(m.name)}</td><td>T${m.tier}</td><td>${m.cost}</td><td>—</td><td>${m.damage}</td><td>${escapeHtml(m.type)}</td><td>${escapeHtml(m.notes)}</td></tr>`).join('');
   return `
   <details>
     <summary>Moves</summary>
     <table>
-      <tr><th>Name</th><th>Tier</th><th>Cost</th><th>Range</th><th>Dmg</th><th>Notes</th></tr>
+      <tr><th>Name</th><th>Tier</th><th>Cost</th><th>Range</th><th>Dmg</th><th>Type</th><th>Notes</th></tr>
       ${danmaku}${melee}
     </table>
   </details>`;
