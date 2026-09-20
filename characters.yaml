@@ -23,8 +23,8 @@ characters:
     lore: "The shrine maiden of the Hakurei Shrine, sitting on the border of Gensokyo. Deals with incidents because someone has to, and it's usually faster than waiting for an explanation."
     hp: 9
     spirit: 8
-    speed: 7
-    defense: 6
+    speed: 3
+    defense: 8
     danmaku:
       - { name: Homing Amulet, tier: 1, cost: 1, range: 35, damage: 2, notes: Curves slightly toward its target }
       - { name: Persuasion Needle, tier: 2, cost: 3, range: 35, damage: 4, notes: Rapid needle volley }
@@ -56,7 +56,7 @@ characters:
     hp: 7
     spirit: 7
     speed: 9
-    defense: 5
+    defense: 3
     danmaku:
       - { name: "Lucky Rabbit's Foot", tier: 1, cost: 1, range: 35, damage: 2, notes: Basic poke }
       - { name: Ill-Omened Fortune, tier: 2, cost: 3, range: 35, damage: 3, notes: Also applies Cursed for 1 round }
@@ -88,7 +88,7 @@ characters:
     hp: 8
     spirit: 8
     speed: 6
-    defense: 6
+    defense: 7
     danmaku:
       - { name: Wind Miracle, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
       - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, notes: "Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE)" }
@@ -103,7 +103,7 @@ characters:
     lore: "A god of poverty. Misfortune and destitution follow wherever she goes — mostly onto other people, which she considers only fair."
     hp: 8
     spirit: 7
-    speed: 5
+    speed: 6
     defense: 5
     danmaku:
       - { name: Aura of Poverty, tier: 1, cost: 1, range: 35, damage: 2, notes: Target also loses 1 Spirit }
@@ -136,7 +136,7 @@ artifacts:
   - { name: Robe of the Fire Rat, effect: "+1 Defense to carrier" }
   - { name: "Dragon's Neck Jewel", effect: "+1 flat damage on carrier's attacks" }
   - { name: "Swallow's Cowrie Shell", effect: "+2 max Spirit to carrier" }
-  - { name: Kaguya's Wrath, effect: "Carrier's attacks bypass Graze and Block" }
+  - { name: Kaguya's Wrath, effect: "Carrier's attacks can't be Grazed; a Nat 1 against them is an ordinary success, not a Block" }
 
 # Duration-tick rules from README.md Section 7.6. hp/speed/defense deltas apply once per Start of Round.
 statusEffects:
