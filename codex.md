@@ -104,7 +104,7 @@ Copy this block for any new character.
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Range | Type | Effect |
 |---|---|---|---|---|---|---|
-| Fantasy Seal | 5 | 2 | 3 | 40cm | direct | 5 damage to one target. (Canonically a spread attack; single-target for now since AoE isn't supported yet — see README.md Section 6.2) |
+| Fantasy Seal | 5 | 2 | 3 | 40cm | large arc | 5 damage to every enemy fumo caught in the arc |
 
 ---
 
@@ -134,7 +134,7 @@ Copy this block for any new character.
 **Spell Cards**
 | Name | Spirit Cost | Uses/Game | Tier | Range | Type | Effect |
 |---|---|---|---|---|---|---|
-| Master Spark | 7 | 1 | 3 | 50cm | direct | 8 damage to one target (highest single hit in the roster). (Canonically a piercing beam; single-target for now since AoE isn't supported yet — see README.md Section 6.2). Costs nearly all of Marisa's Spirit cap in one shot |
+| Master Spark | 7 | 1 | 3 | 50cm | small arc | 8 damage to every enemy fumo caught in the arc (highest single hit in the roster). Costs nearly all of Marisa's Spirit cap in one shot |
 
 ---
 
@@ -214,7 +214,7 @@ Copy this block for any new character.
 | Name | Tier | Spirit Cost | Range | Damage | Type | Notes |
 |---|---|---|---|---|---|---|
 | Wind Miracle | 1 | 1 | 35cm | 2 | direct | Basic bolt |
-| Water Sign: Suwako's Rain | 2 | 3 | 35cm | 4 | direct | Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE) |
+| Water Sign: Suwako's Rain | 2 | 3 | 35cm | 4 | large arc | Hits every enemy fumo in the arc |
 
 **Melee Moves**
 | Name | Tier | Spirit Cost | Damage | Type | Notes |
@@ -273,7 +273,7 @@ Copy this block for any new character.
 **Danmaku Moves**
 | Name | Tier | Spirit Cost | Range | Damage | Type | Notes |
 |---|---|---|---|---|---|---|
-| Butterfly Delusion | 1 | 1 | 35cm | 2 | direct | Single target for now (canonically a spread — see README.md Section 6.2 on AoE) |
+| Butterfly Delusion | 1 | 1 | 35cm | 2 | small arc | Hits every enemy fumo in the arc |
 | Ghost Sign: Soul Sculpture | 2 | 3 | 35cm | 4 | direct | — |
 
 **Melee Moves**

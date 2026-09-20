@@ -35,7 +35,7 @@ characters:
     melee:
       - { name: Gohei Strike, tier: 1, cost: 1, damage: 3, type: direct, notes: Exorcism wand strike }
     spellCards:
-      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, type: direct, effect: "5 damage to one target. (Canonically a spread attack; single-target for now since AoE isn't supported yet — see README.md Section 6.2)" }
+      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, type: large arc, effect: "5 damage to every enemy fumo caught in the arc" }
 
   - name: Marisa Kirisame
     nativeFaction: Gensokyolites
@@ -51,7 +51,7 @@ characters:
     melee:
       - { name: Broom Whack, tier: 1, cost: 1, damage: 2, type: direct, notes: "Weakest melee in the roster — Marisa isn't built for close range" }
     spellCards:
-      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, type: direct, effect: "8 damage to one target (highest single hit in the roster). (Canonically a piercing beam; single-target for now since AoE isn't supported yet — see README.md Section 6.2). Costs nearly all of Marisa's Spirit cap in one shot" }
+      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, type: small arc, effect: "8 damage to every enemy fumo caught in the arc (highest single hit in the roster). Costs nearly all of Marisa's Spirit cap in one shot" }
 
   - name: Tewi Inaba
     nativeFaction: Gensokyolites
@@ -95,7 +95,7 @@ characters:
     defense: 7
     danmaku:
       - { name: Wind Miracle, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: Basic bolt }
-      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, type: direct, notes: "Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE)" }
+      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, type: large arc, notes: Hits every enemy fumo in the arc }
     melee:
       - { name: Miracle Palm Strike, tier: 1, cost: 1, damage: 3, type: direct, notes: Divine-empowered strike }
     spellCards:
@@ -126,7 +126,7 @@ characters:
     speed: 5
     defense: 7
     danmaku:
-      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, type: direct, notes: "Single target for now (canonically a spread — see README.md Section 6.2 on AoE)" }
+      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, type: small arc, notes: Hits every enemy fumo in the arc }
       - { name: "Ghost Sign: Soul Sculpture", tier: 2, cost: 3, range: 35, damage: 4, type: direct, notes: "" }
     melee:
       - { name: Fan of the Nine Heavens, tier: 1, cost: 1, damage: 3, type: direct, notes: "" }
