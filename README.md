@@ -91,7 +91,7 @@
 ### 1.3 The Two Sides
 
 #### Side A — Gensokyolites
-> The residents of Gensokyo, fearing another lunar invasion, deicdes to strike first.
+> The residents of Gensokyo, fearing another lunar invasion, decide to strike first.
 
 #### Side B — Lunarians
 > The forces of the Lunar Capital, pushing toward Gensokyo to take it once and for all.
@@ -112,7 +112,7 @@
 - [ ] Spirit trackers (tokens, dice, or a notepad) per fumo
 
 ### 2.3 Estimated Play Time
-> Roughly 60–120 minutes per game at current round/phase counts. See Appendix for notes on shortening play time (lower round cap, team-activation instead of alternating individual activation, etc.)
+> Roughly 60–120 minutes per game at current round/phase counts.
 
 ### 2.4 Game Loop Summary
 > Each round: all fumos regenerate Spirit simultaneously → fumos activate one at a time in alternating order, each running through Movement, then either Danmaku and/or Melee, or a Spell Card (not both — see Section 6.4) → at the end of the round, objective control is tallied and win conditions are checked. Repeat until a team wins.
@@ -136,12 +136,12 @@
 | Lunar Capital | Opposite end of the board | Side B home/objective zone |
 
 ### 3.4 Deployment
-> Each team deploys its 3 fumos within its own home zone before the game begins.
+> Each team deploys its 3 fumos within its own home zone before the game begins. The order and manner of deployment (simultaneous, one at a time, etc.) is up to each team, as long as every fumo ends up inside that team's home zone.
 
 ### 3.5 Determining Activation Order
-> A coin toss determines the **starting team** — the team that activates first. This toss happens before Round 1 (and also decides who handles the Round 1 Artifact roll, Section 8.3.1), and is re-tossed at the Start of every subsequent Round, so which team activates first can change round to round.
+> A single coin toss, made once before the game begins, determines which team starts **Round 1** and handles the Round 1 Artifact roll (Section 8.3.1). From there, the starting team alternates every round — whoever started Round 1 also starts Rounds 3, 5, 7...; the other team starts Rounds 2, 4, 6... No re-tossing; it's a fixed swap based on round number.
 >
-> Activation alternates between teams, one fumo at a time, that round's starting team first (e.g., starting team fumo 1 → other team fumo 1 → starting team fumo 2 → other team fumo 2 → starting team fumo 3 → other team fumo 3). The specific order of teammates within a team is decided by that team before the round begins, or fixed at game start — house rule as preferred.
+> Within a round, activation alternates between teams, one fumo at a time, that round's starting team first (e.g., starting team fumo 1 → other team fumo 1 → starting team fumo 2 → other team fumo 2 → starting team fumo 3 → other team fumo 3). The specific order of teammates within a team is decided by that team before the round begins, or fixed at game start — house rule as preferred.
 
 ### 3.6 Starting Resources
 > Each fumo begins the game with Spirit at its maximum cap (see Section 4.2).
@@ -191,13 +191,13 @@
 > Blocking is an alternative reactive option to Grazing. The defender spends Spirit to fully stop incoming damage, except against Tier 3 attacks, which cannot be blocked and must be taken (subject to the Defense Roll).
 
 ### 4.6 Defense Rolls
-> If an attack is not avoided via Graze or stopped via Block, the defender rolls a Defense die. A natural 1 negates all damage from that hit regardless of Defense stat. On any other result, damage is reduced by the defender's flat Defense stat before being applied to HP.
+> If an attack is not avoided via Graze or stopped via Block, the defender rolls a d20 against their own Defense stat: rolling lower than the stat succeeds and reduces damage by a flat 2. A natural 1 always negates the hit entirely (Perfect Defense), and a natural 20 always doubles the damage, regardless of the Defense stat. See Section 7.3 for the full breakdown.
 
 ### 4.7 Spell Cards
 > Each character has a limited number of Spell Card uses per game (typically 1–2). Declaring a Spell Card is a formal action taken during the Spell Card Phase, costing a (typically high) amount of Spirit, and resolves a unique, powerful effect defined on the character's card.
 
 ### 4.8 System Cards
-> A shared pool of universal, once-per-game actions (e.g., heal, weather shift, bomb) available to any character regardless of their individual kit. Each fumo may use one System Card once per game.
+> A shared pool of universal, once-per-game actions (e.g., heal, weather shift) available to any character regardless of their individual kit. Each fumo may use one System Card once per game.
 
 ---
 
@@ -207,7 +207,7 @@
 > Start of Round (Spirit regen + zone bonuses + ongoing effects) → Activations (each fumo, alternating teams, runs Movement → (Danmaku and/or Melee) OR Spell Card, not both) → End of Round (objective tally + win condition check) → repeat.
 
 ### 5.2 Start of Round
-- [ ] Coin toss to determine this round's starting team (see Section 3.5)
+- [ ] Determine this round's starting team — alternates automatically from the previous round, no toss needed (see Section 3.5)
 - [ ] All fumos gain Spirit simultaneously per the ramp table (Section 4.2.2)
 - [ ] Apply the Bamboo Forest of the Lost occupancy bonus
 - [ ] Resolve ongoing effects (weather shifts, status ticks, etc.)
@@ -283,7 +283,7 @@
 ### 7.6 Status Effects
 > Status effects are inflicted by specific moves and Spell Cards, not by a generic rule — see the character's entry in the Codex for which of its attacks apply which effect. Each application specifies its own duration in rounds; no single application may exceed 3 rounds. A fumo can be affected by more than one status effect at once, each tracked (and expiring) independently.
 >
-> Damage-over-time effects (Frostbite, Burnt) apply directly at the Start of Round (Section 5.2), with no Graze, Block, or Defense Roll against them. A status effect's remaining duration ticks down by 1 at the Start of Round, after that round's tick (if any) is applied; at 0 it's removed.
+> Start-of-Round tick effects (Frostbite and Burnt for damage, Blessed for healing) apply directly at the Start of Round (Section 5.2), with no Graze, Block, or Defense Roll against them. A status effect's remaining duration ticks down by 1 at the Start of Round, after that round's tick (if any) is applied; at 0 it's removed.
 
 | Effect | Trigger | Duration | Rules |
 |---|---|---|---|
@@ -292,7 +292,7 @@
 | Burnt | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | At the Start of Round, take 2 damage |
 | Sealed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | May still move during its activation, but skips its Danmaku and Melee phases (cannot attack) |
 | Cursed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Every d20 roll this fumo makes (Graze or Defense) is doubled after rolling, before comparing to the target number |
-| Blessed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Every d20 roll this fumo makes (Graze or Defense) is halved (round down) after rolling, before comparing to the target number |
+| Blessed | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | At the Start of Round, heal 1 HP (cannot exceed max HP) |
 | Weaken | Inflicted by a move/Spell Card (see Codex) | Set per application, max 3 rounds | Defense stat is reduced by 1 for as long as this effect lasts |
 
 ---
@@ -355,7 +355,7 @@
 > TODO: Whether a captured site can later be lost/recaptured by the opposing team, or capture is permanent for the rest of the game.
 > TODO: Whether a site's bonus applies team-wide once captured, or only to a specific fumo "carrying" the artifact (and whether that carrier drops it if KO'd).
 > TODO: Exact magnitude/mechanical implementation of each bonus (see table in Section 8.3.1).
-> Note: Capture Points are tallied at End of Round. Whichever team activated last in a round gets the final say on that round's occupancy at a site — see Section 3.5, where the starting team (and so activation order) is re-tossed each round, so this advantage rotates rather than sitting permanently with one team.
+> Note: Capture Points are tallied at End of Round, and whichever team activates last in a given round gets the final say on that round's occupancy at every site. Since the starting team alternates every round (Section 3.5), this last-word advantage swaps sides each round too, rather than sitting permanently with one team.
 
 ### 8.4 Lunar Capital
 - Location on board: Opposite end of the board (Side B home zone)
@@ -433,9 +433,9 @@
 **Round Structure**
 ```mermaid
 flowchart TD
-    A(["Coin toss - starting team (3.5)"]) --> B["Start of Round: Spirit regen, Bamboo Forest bonus (5.2)"]
-    B --> C{"Fumos left to activate this round?"}
-    C -->|Yes| D["Next fumo activates (turn order alternates between teams, 3.5)"]
+    Z(["Coin toss - who starts Round 1, once before the game (3.5)"]) --> A["Start of Round: starting team alternates from last round, Spirit regen, Bamboo Forest bonus (5.2, 3.5)"]
+    A --> C{"Fumos left to activate this round?"}
+    C -->|Yes| D["Next fumo activates (this round's starting team first, 3.5)"]
     D --> E["Movement -> (Danmaku and/or Melee) OR Spell Card, not both (Section 6)"]
     E --> C
     C -->|No| F["End of Round: tally Objective Points (8.5) and Capture Points (8.3.2), check win conditions (11.3)"]
@@ -497,7 +497,7 @@ A:
 | Burnt | Status effect: 2 damage per round while active (see Section 7.6) |
 | Sealed | Status effect: fumo may still move but cannot attack while active (see Section 7.6) |
 | Cursed | Status effect: the fumo's d20 rolls are doubled while active (see Section 7.6) |
-| Blessed | Status effect: the fumo's d20 rolls are halved (round down) while active (see Section 7.6) |
+| Blessed | Status effect: heals 1 HP per round while active (see Section 7.6) |
 | Weaken | Status effect: −1 Defense stat while active (see Section 7.6) |
 
 ### 12.5 Changelog / Version History
@@ -517,6 +517,9 @@ A:
 | 0.12 | | Defined the Movement formula (Section 6.1): Speed × 3cm, calibrated so Speed 8 crosses the ~100cm board in 4 activations |
 | 0.13 | | Removed Danmaku templates and facing (Sections 2.2, 6.2, 6.3, 7.1): attacks are now single-target only, with range as a plain cm distance (melee fixed at 10cm), measured base-to-base. No AoE for now. Also fixed a stale equipment note that still called for a d6 on Defense rolls after Section 7.3 moved to d20 |
 | 0.14 | | Stat cap locked at 12 across HP, Spirit, Speed, and Defense (Section 4.1) |
+| 0.15 | | Proofread pass: fixed Section 4.6 (Defense Rolls), which still described the old pre-7.3 mechanic and contradicted the current d20/flat-2/Nat20-double rules; clarified that Round 1's Start-of-Round coin toss (Section 5.2) reuses the Setup toss (Section 3.5) rather than re-tossing; fixed a dangling "See Appendix" reference in Section 2.3 that pointed at notes which don't exist there; fixed a typo in Section 1.3 |
+| 0.16 | | Reverted the coin toss (Section 3.5) to a single toss made once before the game, not re-tossed each round — removed the now-obsolete per-round toss step from Section 5.2 and the Round Structure diagram (Section 12.1). Note: this means the non-starting team activates last every round, a fixed advantage rather than a rotating one (see Section 8.3.2). Section 2.3's forward-reference to unwritten play-time-shortening rules removed. Section 3.4 now says deployment order is each team's own choice, as long as fumos end up in their home zone. Blessed (Section 7.6) reworked from halving d20 rolls to healing 1 HP per round, mirroring Frostbite/Burnt's damage-over-time structure |
+| 0.17 | | Starting team now alternates every round (Section 3.5) instead of staying fixed all game — the coin toss only decides who starts Round 1, then it swaps automatically each round (no re-tossing). This fixes the last-activates-final-say issue from 0.16: that advantage now swaps sides each round (Section 8.3.2) instead of sitting with one team all game |
 
 ### 12.6 Credits
 > ゆめねぎ
