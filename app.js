@@ -109,7 +109,7 @@ function renderHeader() {
   const rolls = state.rollLog.map(r => `<span>${r}</span>`).join(', ');
   return `
   <div class="site-header">
-    <h1>フモハンマー — Match Tracker</h1>
+    <h1>Match Tracker</h1>
     <div>Round <strong>${state.round}</strong> <button data-action="next-round">Next Round (auto Spirit + status ticks)</button></div>
   </div>
   <div class="controls-row">

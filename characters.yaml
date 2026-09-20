@@ -1,6 +1,10 @@
-# Character presets sourced from codex.md. Stats and move data only — flavor text omitted.
+# Single source of truth for character/artifact/status data.
+# Feeds both the webapp (app.js) and codex.md (via generate-codex.js).
 characters:
   - name: Cirno
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "An ice fairy of the Misty Lake, convinced she's the strongest thing in Gensokyo. Mostly right about the \"strongest fairy\" part."
     hp: 7
     spirit: 6
     speed: 8
@@ -11,9 +15,12 @@ characters:
     melee:
       - { name: Frozen Fist, tier: 1, cost: 1, damage: 3, notes: Close-range ice punch }
     spellCards:
-      - { name: Perfect Freeze, cost: 6, uses: 1, tier: 3, range: 35, effect: "6 damage; also applies Frozen for 1 round" }
+      - { name: Perfect Freeze, cost: 6, uses: 1, tier: 3, range: 35, effect: "6 damage to one target; also applies Frozen for 1 round (see README.md Section 7.6)" }
 
   - name: Reimu Hakurei
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "The shrine maiden of the Hakurei Shrine, sitting on the border of Gensokyo. Deals with incidents because someone has to, and it's usually faster than waiting for an explanation."
     hp: 9
     spirit: 8
     speed: 7
@@ -24,9 +31,12 @@ characters:
     melee:
       - { name: Gohei Strike, tier: 1, cost: 1, damage: 3, notes: Exorcism wand strike }
     spellCards:
-      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, effect: "5 damage to one target" }
+      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, effect: "5 damage to one target. (Canonically a spread attack; single-target for now since AoE isn't supported yet — see README.md Section 6.2)" }
 
   - name: Marisa Kirisame
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "A human magician who'll borrow anything not nailed down, including magic. Prefers to solve problems by pointing a very large laser at them."
     hp: 7
     spirit: 9
     speed: 8
@@ -35,11 +45,14 @@ characters:
       - { name: Magic Missile, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
       - { name: Illusion Laser, tier: 2, cost: 3, range: 50, damage: 4, notes: Thin piercing beam }
     melee:
-      - { name: Broom Whack, tier: 1, cost: 1, damage: 2, notes: Weakest melee in the roster }
+      - { name: Broom Whack, tier: 1, cost: 1, damage: 2, notes: "Weakest melee in the roster — Marisa isn't built for close range" }
     spellCards:
-      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, effect: "8 damage to one target, highest single hit in the roster" }
+      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, effect: "8 damage to one target (highest single hit in the roster). (Canonically a piercing beam; single-target for now since AoE isn't supported yet — see README.md Section 6.2). Costs nearly all of Marisa's Spirit cap in one shot" }
 
   - name: Tewi Inaba
+    nativeFaction: Gensokyolites
+    zoneAffinity: "Bamboo Forest of the Lost — Tewi lives in Eientei, right on its doorstep. While occupying the Bamboo Forest, she gains an additional +1 Spirit at Start of Round, stacking with the zone's own bonus (README.md Section 8.3)"
+    lore: "An old, powerful rabbit youkai posing as a minor resident of Eientei. Controls luck — usually other people's, and usually for the worse."
     hp: 7
     spirit: 7
     speed: 9
@@ -53,6 +66,9 @@ characters:
       - { name: Beckoning of the Unlucky, cost: 5, uses: 1, tier: 3, range: 35, effect: "4 damage; also applies Cursed for 2 rounds" }
 
   - name: Aya Shameimaru
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "Tengu reporter for the Bunbunmaru Newspaper, and the fastest thing in Gensokyo when she's not busy embellishing a story."
     hp: 6
     spirit: 6
     speed: 10
@@ -63,22 +79,28 @@ characters:
     melee:
       - { name: Fan Strike, tier: 1, cost: 1, damage: 3, notes: Quick fan whack }
     spellCards:
-      - { name: Illusionary Wind God, cost: 6, uses: 1, tier: 3, range: 40, effect: "5 damage; Aya may move an extra Speed-derived distance after" }
+      - { name: Illusionary Wind God, cost: 6, uses: 1, tier: 3, range: 40, effect: "5 damage to one target; Aya may immediately move an additional Speed-derived distance after this resolves (an exception to normal phase order, in the same spirit as the special movement types already allowed under README.md Section 6.1)" }
 
   - name: Sanae Kochiya
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "Shrine maiden of the Moriya Shrine, and a human on her way to becoming a minor goddess. Performs miracles because the gods she serves need the publicity."
     hp: 8
     spirit: 8
     speed: 6
     defense: 6
     danmaku:
       - { name: Wind Miracle, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
-      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, notes: Single target for now }
+      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, notes: "Single target for now (canonically wide coverage — see README.md Section 6.2 on AoE)" }
     melee:
       - { name: Miracle Palm Strike, tier: 1, cost: 1, damage: 3, notes: Divine-empowered strike }
     spellCards:
-      - { name: Yasaka's Divine Wind, cost: 6, uses: 1, tier: 3, range: 35, effect: "4 damage; Sanae also gains Blessed for 2 rounds" }
+      - { name: Yasaka's Divine Wind, cost: 6, uses: 1, tier: 3, range: 35, effect: "4 damage to one target; Sanae also gains Blessed for 2 rounds" }
 
   - name: Yorigami Shion
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "A god of poverty. Misfortune and destitution follow wherever she goes — mostly onto other people, which she considers only fair."
     hp: 8
     spirit: 7
     speed: 5
@@ -92,17 +114,20 @@ characters:
       - { name: Deific Poverty God, cost: 6, uses: 1, tier: 3, range: 35, effect: "5 damage; target also loses 3 Spirit" }
 
   - name: Yuyuko Saigyouji
+    nativeFaction: Gensokyolites
+    zoneAffinity: None
+    lore: "Ghost princess of Hakugyokurou, cheerfully obsessed with death, and one of the most powerful beings in Gensokyo whenever she can be bothered to act like it."
     hp: 9
     spirit: 10
     speed: 5
     defense: 7
     danmaku:
-      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, notes: Single target for now }
+      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, notes: "Single target for now (canonically a spread — see README.md Section 6.2 on AoE)" }
       - { name: "Ghost Sign: Soul Sculpture", tier: 2, cost: 3, range: 35, damage: 4, notes: "" }
     melee:
       - { name: Fan of the Nine Heavens, tier: 1, cost: 1, damage: 3, notes: "" }
     spellCards:
-      - { name: Perfect Cherry Blossom, cost: 8, uses: 1, tier: 3, range: 40, effect: "7 damage; also applies Frozen for 1 round" }
+      - { name: Perfect Cherry Blossom, cost: 8, uses: 1, tier: 3, range: 40, effect: "7 damage; also applies Frozen for 1 round. Highest all-in single Spell Card in the roster" }
 
 # The six-artifact pool from README.md Section 8.3.1.
 artifacts:
