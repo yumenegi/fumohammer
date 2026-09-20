@@ -1,0 +1,124 @@
+# Character presets sourced from codex.md. Stats and move data only — flavor text omitted.
+characters:
+  - name: Cirno
+    hp: 7
+    spirit: 6
+    speed: 8
+    defense: 3
+    danmaku:
+      - { name: Icicle Fall, tier: 1, cost: 1, range: 20, damage: 2, notes: Freely grazeable poke }
+      - { name: "Ice Sign: Icicle Machine Gun", tier: 2, cost: 3, range: 35, damage: 4, notes: Rapid volley }
+    melee:
+      - { name: Frozen Fist, tier: 1, cost: 1, damage: 3, notes: Close-range ice punch }
+    spellCards:
+      - { name: Perfect Freeze, cost: 6, uses: 1, tier: 3, range: 35, effect: "6 damage; also applies Frozen for 1 round" }
+
+  - name: Reimu Hakurei
+    hp: 9
+    spirit: 8
+    speed: 7
+    defense: 6
+    danmaku:
+      - { name: Homing Amulet, tier: 1, cost: 1, range: 35, damage: 2, notes: Curves slightly toward its target }
+      - { name: Persuasion Needle, tier: 2, cost: 3, range: 35, damage: 4, notes: Rapid needle volley }
+    melee:
+      - { name: Gohei Strike, tier: 1, cost: 1, damage: 3, notes: Exorcism wand strike }
+    spellCards:
+      - { name: Fantasy Seal, cost: 5, uses: 2, tier: 3, range: 40, effect: "5 damage to one target" }
+
+  - name: Marisa Kirisame
+    hp: 7
+    spirit: 9
+    speed: 8
+    defense: 4
+    danmaku:
+      - { name: Magic Missile, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
+      - { name: Illusion Laser, tier: 2, cost: 3, range: 50, damage: 4, notes: Thin piercing beam }
+    melee:
+      - { name: Broom Whack, tier: 1, cost: 1, damage: 2, notes: Weakest melee in the roster }
+    spellCards:
+      - { name: Master Spark, cost: 7, uses: 1, tier: 3, range: 50, effect: "8 damage to one target, highest single hit in the roster" }
+
+  - name: Tewi Inaba
+    hp: 7
+    spirit: 7
+    speed: 9
+    defense: 5
+    danmaku:
+      - { name: "Lucky Rabbit's Foot", tier: 1, cost: 1, range: 35, damage: 2, notes: Basic poke }
+      - { name: Ill-Omened Fortune, tier: 2, cost: 3, range: 35, damage: 3, notes: Also applies Cursed for 1 round }
+    melee:
+      - { name: Spade Dig, tier: 1, cost: 1, damage: 3, notes: Quick strike from a tunnel }
+    spellCards:
+      - { name: Beckoning of the Unlucky, cost: 5, uses: 1, tier: 3, range: 35, effect: "4 damage; also applies Cursed for 2 rounds" }
+
+  - name: Aya Shameimaru
+    hp: 6
+    spirit: 6
+    speed: 10
+    defense: 3
+    danmaku:
+      - { name: Gust of Wind, tier: 1, cost: 1, range: 50, damage: 2, notes: Basic wind blast }
+      - { name: "Tengu's Gale", tier: 2, cost: 3, range: 50, damage: 4, notes: Also applies Weaken for 1 round }
+    melee:
+      - { name: Fan Strike, tier: 1, cost: 1, damage: 3, notes: Quick fan whack }
+    spellCards:
+      - { name: Illusionary Wind God, cost: 6, uses: 1, tier: 3, range: 40, effect: "5 damage; Aya may move an extra Speed-derived distance after" }
+
+  - name: Sanae Kochiya
+    hp: 8
+    spirit: 8
+    speed: 6
+    defense: 6
+    danmaku:
+      - { name: Wind Miracle, tier: 1, cost: 1, range: 35, damage: 2, notes: Basic bolt }
+      - { name: "Water Sign: Suwako's Rain", tier: 2, cost: 3, range: 35, damage: 4, notes: Single target for now }
+    melee:
+      - { name: Miracle Palm Strike, tier: 1, cost: 1, damage: 3, notes: Divine-empowered strike }
+    spellCards:
+      - { name: Yasaka's Divine Wind, cost: 6, uses: 1, tier: 3, range: 35, effect: "4 damage; Sanae also gains Blessed for 2 rounds" }
+
+  - name: Yorigami Shion
+    hp: 8
+    spirit: 7
+    speed: 5
+    defense: 5
+    danmaku:
+      - { name: Aura of Poverty, tier: 1, cost: 1, range: 35, damage: 2, notes: Target also loses 1 Spirit }
+      - { name: Misfortune's Embrace, tier: 2, cost: 3, range: 35, damage: 3, notes: Target also loses 2 Spirit }
+    melee:
+      - { name: Destitute Grasp, tier: 1, cost: 1, damage: 3, notes: Target also loses 1 Spirit }
+    spellCards:
+      - { name: Deific Poverty God, cost: 6, uses: 1, tier: 3, range: 35, effect: "5 damage; target also loses 3 Spirit" }
+
+  - name: Yuyuko Saigyouji
+    hp: 9
+    spirit: 10
+    speed: 5
+    defense: 7
+    danmaku:
+      - { name: Butterfly Delusion, tier: 1, cost: 1, range: 35, damage: 2, notes: Single target for now }
+      - { name: "Ghost Sign: Soul Sculpture", tier: 2, cost: 3, range: 35, damage: 4, notes: "" }
+    melee:
+      - { name: Fan of the Nine Heavens, tier: 1, cost: 1, damage: 3, notes: "" }
+    spellCards:
+      - { name: Perfect Cherry Blossom, cost: 8, uses: 1, tier: 3, range: 40, effect: "7 damage; also applies Frozen for 1 round" }
+
+# The six-artifact pool from README.md Section 8.3.1.
+artifacts:
+  - { name: "Buddha's Stone Bowl", effect: "+2 max HP to carrier" }
+  - { name: Jeweled Branch of Hourai, effect: "+1 Speed to carrier" }
+  - { name: Robe of the Fire Rat, effect: "+1 Defense to carrier" }
+  - { name: "Dragon's Neck Jewel", effect: "+1 flat damage on carrier's attacks" }
+  - { name: "Swallow's Cowrie Shell", effect: "+2 max Spirit to carrier" }
+  - { name: Kaguya's Wrath, effect: "Carrier's attacks bypass Graze and Block" }
+
+# Duration-tick rules from README.md Section 7.6. hp/speed/defense deltas apply once per Start of Round.
+statusEffects:
+  Frozen: {}
+  Frostbite: { hp: -1, speed: -1 }
+  Burnt: { hp: -2 }
+  Sealed: {}
+  Cursed: {}
+  Blessed: { hp: 1 }
+  Weaken: { defense: -1 }
