@@ -154,7 +154,7 @@
 | Stat | Description | Range |
 |---|---|---|
 | HP | Health pool; reaching 0 removes the fumo from play | 1–12, varies by character |
-| Spirit | Resource spent on attacks, grazing, blocking, and spell cards; regenerates each round | 1–12, varies by character (max cap) |
+| Spirit | Resource spent on attacks, Tier 2 grazing, and spell cards; regenerates each round | 1–12, varies by character (max cap) |
 | Speed | Governs Movement distance (Speed × 3cm, see Section 6.1) and Graze roll target number | 1–12, varies by character |
 | Defense | Target number for the Defense Roll — roll below this to succeed (see Section 7.3); the reduction amount on success is flat, not stat-based | 1–12, varies by character |
 
@@ -176,22 +176,22 @@
 > Fumos occupying the Bamboo Forest of the Lost at the Start of Round gain an additional +1 Spirit that round (see Section 8.3).
 
 ### 4.3 Attack Tiers
-> All Danmaku and Melee moves are assigned a Tier, which determines how they interact with Grazing and Blocking.
+> All Danmaku and Melee moves are assigned a Tier, which determines whether they can be Grazed. Every Tier can still come up a Block on the Defense Roll (Section 7.3).
 
 | Tier | Grazeable? | Notes |
 |---|---|---|
 | 1 | Yes, freely | No Spirit cost to graze |
-| 2 | Yes | Grazing this tier costs the defender Spirit even on a successful graze |
-| 3 | No | Cannot be grazed under any circumstance; must be Blocked or taken in full |
+| 2 | Yes | A successful graze against this tier costs the defender 1 Spirit; a failed graze costs nothing |
+| 3 | No | Cannot be grazed under any circumstance; always resolved by the Defense Roll |
 
 ### 4.4 Grazing
-> Grazing is a reactive Speed-based check a defender may attempt against a Tier 1 or Tier 2 attack. Roll a d20; if the result is equal to or under the defender's Speed stat, the graze succeeds and the attack is avoided (subject to any Spirit cost for Tier 2). If the roll fails, proceed to the Defense Roll (Section 4.6).
+> Grazing is a reactive Speed-based check a defender may attempt against a Tier 1 or Tier 2 attack. Roll a d20; if the result is equal to or under the defender's Speed stat, the graze succeeds and the attack is avoided (a successful Tier 2 graze costs the defender 1 Spirit; Tier 1 is free). If the roll fails, proceed to the Defense Roll (Section 4.6) — a failed graze costs no Spirit, at either Tier.
 
 ### 4.5 Blocking
-> Blocking is an alternative reactive option to Grazing. The defender spends Spirit to fully stop incoming damage, except against Tier 3 attacks, which cannot be blocked and must be taken (subject to the Defense Roll).
+> Block is not a separate action the defender declares or spends Spirit on — it isn't its own phase or reaction. A Block simply is what a natural 1 on the Defense Roll (Section 4.6) means: the attack is fully negated. It can happen on any attack that reaches the Defense Roll, at any Tier.
 
 ### 4.6 Defense Rolls
-> If an attack is not avoided via Graze or stopped via Block, the defender rolls a d20 against their own Defense stat: rolling lower than the stat succeeds and reduces damage by a flat 2. A natural 1 always negates the hit entirely (Perfect Defense), and a natural 20 always doubles the damage, regardless of the Defense stat. See Section 7.3 for the full breakdown.
+> If an attack is not avoided via Graze, the defender rolls a d20 against their own Defense stat: rolling lower than the stat succeeds and reduces damage by a flat 2. A natural 1 always negates the hit entirely — this is a **Block** — and a natural 20 always doubles the damage, regardless of the Defense stat. See Section 7.3 for the full breakdown.
 
 ### 4.7 Spell Cards
 > Each character has a limited number of Spell Card uses per game (typically 1–2). Declaring a Spell Card is a formal action taken during the Spell Card Phase, costing a (typically high) amount of Spirit, and resolves a unique, powerful effect defined on the character's card.
@@ -231,7 +231,7 @@
 > Sanity check: Cirno (Speed 8) moves 24cm per activation — 96cm over 4 activations, enough to cross the full ~100cm board (Section 3.2) in 4 turns, since a fumo's own footprint means it doesn't need to travel the literal full length to reach the far zone.
 
 ### 6.2 Danmaku Phase
-> The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and pick one enemy fumo within that move's range (a plain cm distance, listed on the character's card — see the Codex). No templates or facing for now — range is a simple distance check, and attacks are single-target only (no AoE). The defender may react live with a Graze attempt, a Block, or take the hit outright, following the Combat Resolution sequence in Section 7.
+> The active fumo may make one ranged attack: choose a Danmaku move, pay its Spirit cost, and pick one enemy fumo within that move's range (a plain cm distance, listed on the character's card — see the Codex). No templates or facing for now — range is a simple distance check, and attacks are single-target only (no AoE). The defender may react live with a Graze attempt if the attack's Tier allows it; otherwise (or if the Graze fails) it resolves via the Defense Roll, following the Combat Resolution sequence in Section 7.
 >
 > Range (and Movement, and melee range) is measured base-to-base: nearest edge of the attacker's base to nearest edge of the target's base.
 >
@@ -254,31 +254,31 @@
 ### 7.1 Attack Sequence (Step by Step)
 1. Attacker declares a move (Danmaku or Melee) against one target, paying its Spirit cost.
 2. Attacker confirms the target is within the move's range (Danmaku) or within 10cm (Melee) — see Section 6.2.
-3. Defender declares a reaction: Graze, Block, or none (per the attack's Tier restrictions).
-4. Resolve the declared reaction (Graze roll, Block, or proceed directly to the Defense Roll).
+3. Defender declares whether to attempt a Graze (only possible if the attack's Tier allows it).
+4. Resolve the Graze attempt if one was declared; if there was none, or it failed, proceed to the Defense Roll.
 5. Apply remaining damage to the defender's HP, and deduct any Spirit spent by either party.
 
 ### 7.2 Graze Roll
 - Die: d20
 - Target: roll equal to or under the defender's Speed stat
-- Success effect: attack is avoided (Tier 2 still costs Spirit to graze)
-- Failure effect: proceed to the Defense Roll
+- Success effect: attack is avoided (Tier 2 costs the defender 1 Spirit)
+- Failure effect: proceed to the Defense Roll (no Spirit cost, even at Tier 2)
 
 ### 7.3 Defense Roll
 - Die: d20
 - Target: roll lower than the defender's Defense stat
 - Success effect: defense succeeds — damage reduced by 2 (flat, same for every character; the Defense stat only sets the roll's target number)
 - Failure effect: defense fails — full damage taken, unreduced
-- Critical (Nat 1) effect: Perfect Defense — attack negated entirely, zero damage taken, regardless of Defense stat
+- Critical (Nat 1) effect: **Block** — attack negated entirely, zero damage taken, regardless of Defense stat
 - Critical (Nat 20) effect: damage doubled before any other mitigation
 
 > TODO: The Graze Roll (Section 7.2) succeeds on "equal to or under," while the Defense Roll succeeds on strictly "lower than" — confirm this asymmetry is intentional rather than a slip, since it's an easy thing to misremember at the table.
 
 ### 7.4 Blocking Rules
-> Declared instead of a Graze attempt. Costs Spirit (more than a Graze) and fully stops damage from Tier 1 and Tier 2 attacks. Tier 3 attacks cannot be blocked.
+> A Block is not declared and has no Spirit cost — it isn't a choice, it's what a natural 1 on the Defense Roll (Section 7.3) means. It can happen on an attack of any Tier, since every attack that isn't avoided by a Graze reaches the Defense Roll.
 
 ### 7.5 Damage & HP Loss
-> Damage remaining after Graze/Block/Defense mitigation is subtracted from the defender's current HP. A fumo reduced to 0 HP is removed from play.
+> Damage remaining after a Graze attempt and the Defense Roll (which may come up a Block) is subtracted from the defender's current HP. A fumo reduced to 0 HP is removed from play.
 
 ### 7.6 Status Effects
 > Status effects are inflicted by specific moves and Spell Cards, not by a generic rule — see the character's entry in the Codex for which of its attacks apply which effect. Each application specifies its own duration in rounds; no single application may exceed 3 rounds. A fumo can be affected by more than one status effect at once, each tracked (and expiring) independently.
@@ -324,7 +324,7 @@
 | Robe of the Fire Rat | Kaguya's Treasures | Defense | +1 Defense to its carrier |
 | Dragon's Neck Jewel | Kaguya's Treasures | Attack | +1 flat damage on all of its carrier's attacks |
 | Swallow's Cowrie Shell | Kaguya's Treasures | Spirit | +2 max Spirit (and current Spirit) to its carrier |
-| Kaguya's Wrath | — | Special | None of its carrier's attacks can be Grazed or Blocked, regardless of Tier — every hit goes straight to the Defense Roll |
+| Kaguya's Wrath | — | Special | None of its carrier's attacks can be Grazed. A natural 1 on the Defense Roll against one of these attacks does not Block — treat it as an ordinary success (flat −2) instead |
 
 Bonus Type and Effect are fixed properties of each artifact (playtest values — not balanced, just something to run games with).
 
@@ -449,19 +449,17 @@ flowchart TD
     A(["Attacker declares move, pays Spirit (7.1)"]) --> B["Confirm target within range (Danmaku) or 10cm (Melee)"]
     B --> C{"Attack Tier?"}
     C -->|"Tier 3"| G["Defense Roll: d20 vs Defense stat (7.3)"]
-    C -->|"Tier 1 or 2"| D{"Defender's reaction"}
-    D -->|"Block"| E["Pay Spirit to Block (7.4)"]
-    E --> F(["Damage fully stopped"])
-    D -->|"Graze"| H["Roll d20, target <= Speed stat (7.2)"]
+    C -->|"Tier 1 or 2"| D{"Defender attempts Graze?"}
+    D -->|"Yes"| H["Roll d20, target <= Speed stat (7.2)"]
     H --> I{"Roll <= Speed?"}
-    I -->|"Success"| J(["Attack avoided (Tier 2 still costs Spirit)"])
+    I -->|"Success"| J(["Attack avoided (Tier 2 costs 1 Spirit)"])
     I -->|"Fail"| G
-    D -->|"No reaction"| G
+    D -->|"No"| G
     G --> K{"Roll result"}
-    K -->|"Nat 1"| L(["Perfect Defense: 0 damage"])
+    K -->|"Nat 1"| L(["Block: 0 damage"])
     K -->|"Nat 20"| M["Damage doubled"]
     M --> P["Apply damage to HP"]
-    K -->|"Lower than Defense stat"| N["Damage reduced by flat Defense stat"]
+    K -->|"Lower than Defense stat"| N["Damage reduced by flat 2"]
     N --> P
     K -->|"Defense stat or higher"| O["Full damage taken"]
     O --> P
@@ -484,9 +482,9 @@ A:
 | Term | Definition |
 |---|---|
 | Graze | A Speed-based reactive check to avoid a Tier 1 or Tier 2 attack entirely |
-| Block | A Spirit-costed reactive action that fully stops damage from Tier 1/2 attacks |
-| Spirit | The shared resource spent on attacks, grazing, blocking, and spell cards |
-| Tier | Classification of an attack determining how it interacts with Grazing/Blocking |
+| Block | Not a declared action — the result of rolling a natural 1 on the Defense Roll, fully negating the attack |
+| Spirit | The shared resource spent on attacks, Tier 2 grazing, and spell cards |
+| Tier | Classification of an attack determining whether it can be Grazed (Block, via the Defense Roll, applies regardless of Tier) |
 | Artifact Site | One of three locations within the Bamboo Forest of the Lost that can be captured for a persistent bonus (see Section 8.3.1) |
 | Capture Point | Progress toward capturing an Artifact Site, gained per occupying fumo at End of Round, capped at +2/round (see Section 8.3.2) |
 | Objective Point | Progress toward Objective Control of an enemy home zone, gained per occupying fumo at End of Round, capped at +2/round — separate from Capture Points (see Section 8.5) |
@@ -520,6 +518,8 @@ A:
 | 0.17 | | Starting team now alternates every round (Section 3.5) instead of staying fixed all game — the coin toss only decides who starts Round 1, then it swaps automatically each round (no re-tossing). This fixes the last-activates-final-say issue from 0.16: that advantage now swaps sides each round (Section 8.3.2) instead of sitting with one team all game |
 | 0.18 | | Filled in playtest values for all six Artifacts (Section 8.3.1) — flat stat bonuses (+2 HP, +1 Speed, +1 Defense, +1 damage, +2 Spirit) for the five treasures, plus an unblockable-by-Graze effect for Kaguya's Wrath. Artifact bonuses now go to a **carrier**: whichever fumo is occupying the site when it's captured (team's choice if more than one is there); the bonus is lost for good if the carrier is KO'd, but the site stays captured either way (Section 8.3.2). Not balanced — placeholders to actually run a game with |
 | 0.19 | | Kaguya's Wrath (Section 8.3.1) strengthened — its carrier's attacks now bypass both Graze and Block, not just Graze, regardless of Tier |
+| 0.20 | | Tier 2 Graze cost set at 1 Spirit on a success only — a failed graze costs nothing, at either Tier (Sections 4.3, 4.4, 7.2). Was previously unspecified. Block's Spirit cost is still just "more than a Graze," no number yet |
+| 0.21 | | Removed Block as a separately declared action (Sections 4.5, 7.4) — it's no longer chosen or Spirit-costed. A Block is now just what a natural 1 on the Defense Roll (Section 7.3) means, for an attack of any Tier. Attack Sequence (7.1), the Danmaku Phase (6.2), and the Combat Resolution diagram (12.1) updated to match — defender now only ever declares whether to attempt a Graze. Reworded Kaguya's Wrath (8.3.1) accordingly: it denies Graze and downgrades a Nat 1 against it to an ordinary success rather than a Block. Also fixed a stale "flat Defense stat" label in the combat diagram (should've read "flat 2" since 0.10) and two leftover "Spirit spent on... blocking" mentions |
 
 ### 12.6 Credits
 > ゆめねぎ  
