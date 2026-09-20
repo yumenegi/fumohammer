@@ -319,18 +319,18 @@
 
 | Artifact | Source | Bonus Type | Effect |
 |---|---|---|---|
-| Buddha's Stone Bowl | Kaguya's Treasures | TODO | TODO |
-| Jeweled Branch of Hourai | Kaguya's Treasures | TODO | TODO |
-| Robe of the Fire Rat | Kaguya's Treasures | TODO | TODO |
-| Dragon's Neck Jewel | Kaguya's Treasures | TODO | TODO |
-| Swallow's Cowrie Shell | Kaguya's Treasures | TODO | TODO |
-| Kaguya's Wrath | — | TODO | TODO |
+| Buddha's Stone Bowl | Kaguya's Treasures | HP | +2 max HP (and current HP) to its carrier |
+| Jeweled Branch of Hourai | Kaguya's Treasures | Speed | +1 Speed to its carrier |
+| Robe of the Fire Rat | Kaguya's Treasures | Defense | +1 Defense to its carrier |
+| Dragon's Neck Jewel | Kaguya's Treasures | Attack | +1 flat damage on all of its carrier's attacks |
+| Swallow's Cowrie Shell | Kaguya's Treasures | Spirit | +2 max Spirit (and current Spirit) to its carrier |
+| Kaguya's Wrath | — | Special | None of its carrier's attacks can be Grazed or Blocked, regardless of Tier — every hit goes straight to the Defense Roll |
+
+Bonus Type and Effect are fixed properties of each artifact (playtest values — not balanced, just something to run games with).
 
 **Determining which artifacts are in play:** At the beginning of the game, the starting team rolls dice to determine which three of the six artifacts are in play this game, one assigned to each Artifact Site.
 
 > TODO: Exact dice procedure — die type, number of rolls, and how results map to (a) which 3 of 6 artifacts are selected and (b) which site each is assigned to.
-> TODO: Whether each artifact has a fixed Bonus Type (Attack/Defense/Speed) as a property of the artifact itself, or whether type is also determined by the roll/site rather than being intrinsic to the artifact.
-> TODO: Whether Kaguya's Wrath functions as a flat stat bonus like the treasures, or a distinct/unique effect (its name suggests something more dramatic than a flat Attack/Defense/Speed buff).
 > TODO: Exact placement of the three sites within the Bamboo Forest's footprint (see Section 8.1 Zone Map).
 
 #### 8.3.2 Capture Rules
@@ -341,7 +341,7 @@
   - No enemy fumo is also occupying the site (see Contested, below)
   - None of that team's fumo(s) at the site were attacked during the round (see Attacked, below)
   - The team has no fumo remaining in its own home zone — a team must fully commit away from home before it can earn Capture Points at any site
-- Once a team reaches 3 Capture Points at a site, it captures the site and gains that site's bonus effect (Section 8.3.1)
+- Once a team reaches 3 Capture Points at a site, it captures the site. The bonus effect (Section 8.3.1) goes to the site's **carrier** — whichever of the team's fumos is occupying the site at the moment of capture. If more than one of the team's fumos is there, the team picks which one carries it. If the carrier is later reduced to 0 HP, the bonus is lost for the rest of the game (the site stays captured; it just has no effect anymore)
 
 **Pausing vs. resetting progress:**
 - **Contested:** If fumos from both teams occupy the site at End of Round, neither team gains a Capture Point that round — but existing progress is *not* cleared.
@@ -352,9 +352,7 @@
 
 > TODO: Which site receives the bonus Capture Point from a KO'd fumo — the team's choice, automatically applied to a site they're currently occupying, or something else.
 > TODO: Whether "no fumo in home" means strictly that team's own home zone, or a broader commitment requirement.
-> TODO: Whether a captured site can later be lost/recaptured by the opposing team, or capture is permanent for the rest of the game.
-> TODO: Whether a site's bonus applies team-wide once captured, or only to a specific fumo "carrying" the artifact (and whether that carrier drops it if KO'd).
-> TODO: Exact magnitude/mechanical implementation of each bonus (see table in Section 8.3.1).
+> Note: A captured site stays captured for the rest of the game — it can't be recaptured by the opposing team. Only its carrier fumo (and therefore its bonus) is at risk if that fumo is KO'd.
 > Note: Capture Points are tallied at End of Round, and whichever team activates last in a given round gets the final say on that round's occupancy at every site. Since the starting team alternates every round (Section 3.5), this last-word advantage swaps sides each round too, rather than sitting permanently with one team.
 
 ### 8.4 Lunar Capital
@@ -520,6 +518,8 @@ A:
 | 0.15 | | Proofread pass: fixed Section 4.6 (Defense Rolls), which still described the old pre-7.3 mechanic and contradicted the current d20/flat-2/Nat20-double rules; clarified that Round 1's Start-of-Round coin toss (Section 5.2) reuses the Setup toss (Section 3.5) rather than re-tossing; fixed a dangling "See Appendix" reference in Section 2.3 that pointed at notes which don't exist there; fixed a typo in Section 1.3 |
 | 0.16 | | Reverted the coin toss (Section 3.5) to a single toss made once before the game, not re-tossed each round — removed the now-obsolete per-round toss step from Section 5.2 and the Round Structure diagram (Section 12.1). Note: this means the non-starting team activates last every round, a fixed advantage rather than a rotating one (see Section 8.3.2). Section 2.3's forward-reference to unwritten play-time-shortening rules removed. Section 3.4 now says deployment order is each team's own choice, as long as fumos end up in their home zone. Blessed (Section 7.6) reworked from halving d20 rolls to healing 1 HP per round, mirroring Frostbite/Burnt's damage-over-time structure |
 | 0.17 | | Starting team now alternates every round (Section 3.5) instead of staying fixed all game — the coin toss only decides who starts Round 1, then it swaps automatically each round (no re-tossing). This fixes the last-activates-final-say issue from 0.16: that advantage now swaps sides each round (Section 8.3.2) instead of sitting with one team all game |
+| 0.18 | | Filled in playtest values for all six Artifacts (Section 8.3.1) — flat stat bonuses (+2 HP, +1 Speed, +1 Defense, +1 damage, +2 Spirit) for the five treasures, plus an unblockable-by-Graze effect for Kaguya's Wrath. Artifact bonuses now go to a **carrier**: whichever fumo is occupying the site when it's captured (team's choice if more than one is there); the bonus is lost for good if the carrier is KO'd, but the site stays captured either way (Section 8.3.2). Not balanced — placeholders to actually run a game with |
+| 0.19 | | Kaguya's Wrath (Section 8.3.1) strengthened — its carrier's attacks now bypass both Graze and Block, not just Graze, regardless of Tier |
 
 ### 12.6 Credits
 > ゆめねぎ  
